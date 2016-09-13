@@ -1,0 +1,619 @@
+(source_file
+  (import_decl 'UIKit')
+  (import_decl ‘SourceKit')
+  (protocol "CVCalendarViewDelegate"<Self : CVCalendarViewDelegate> type='CVCalendarViewDelegate.Protocol' access=public @objc @_resilient_layout
+    (func_decl "presentationMode()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> CalendarMode' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> CVCalendarViewPresentationMode' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='CalendarMode' bind=CVCalendar.(file).CalendarMode@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift:20:18))))
+    (func_decl "firstWeekday()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Weekday' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> CVCalendarWeekday' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Weekday' bind=CVCalendar.(file).Weekday@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift:21:18))))
+    (func_decl "shouldAnimateResizing()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "shouldScrollOnOutDayViewSelection()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "shouldAutoSelectDayOnWeekChange()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "shouldAutoSelectDayOnMonthChange()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "shouldShowWeekdaysOut()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "didSelectDayView(_:animationDidFinish:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (DayView, animationDidFinish: Bool) -> ()' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (CVCalendarDayView, animationDidFinish: Bool) -> ()' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" type='DayView')
+        (parameter "animationDidFinish" apiName=animationDidFinish type='Bool')))
+    (func_decl "presentedDateUpdated(_:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (Date) -> ()' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> CVDate -> ()' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "date" type='Date')))
+    (func_decl "topMarker(shouldDisplayOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (shouldDisplayOnDayView: DayView) -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (shouldDisplayOnDayView: CVCalendarDayView) -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=shouldDisplayOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "dotMarker(shouldMoveOnHighlightingOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (shouldMoveOnHighlightingOnDayView: DayView) -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (shouldMoveOnHighlightingOnDayView: CVCalendarDayView) -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=shouldMoveOnHighlightingOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "dotMarker(shouldShowOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (shouldShowOnDayView: DayView) -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (shouldShowOnDayView: CVCalendarDayView) -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=shouldShowOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "dotMarker(colorOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (colorOnDayView: DayView) -> [UIColor]' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (colorOnDayView: CVCalendarDayView) -> Array<UIColor>' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=colorOnDayView type='DayView'))
+      (result
+        (type_array
+          (type_ident
+            (component id='UIColor' bind=UIKit.(file).UIColor)))))
+    (func_decl "dotMarker(moveOffsetOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (moveOffsetOnDayView: DayView) -> CGFloat' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (moveOffsetOnDayView: CVCalendarDayView) -> CGFloat' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=moveOffsetOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='CGFloat' bind=CoreGraphics.(file).CGFloat))))
+    (func_decl "dotMarker(sizeOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (sizeOnDayView: DayView) -> CGFloat' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (sizeOnDayView: CVCalendarDayView) -> CGFloat' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=sizeOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='CGFloat' bind=CoreGraphics.(file).CGFloat))))
+    (func_decl "selectionViewPath()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> ((CGRect) -> (UIBezierPath))' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> CGRect -> UIBezierPath' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_tuple
+          (type_function
+            (type_tuple
+              (type_ident
+                (component id='CGRect' bind=CoreGraphics.(file).CGRect)))
+            (type_tuple
+              (type_ident
+                (component id='UIBezierPath' bind=UIKit.(file).UIBezierPath)))))))
+    (func_decl "shouldShowCustomSingleSelection()" type='<`Self` : CVCalendarViewDelegate> (Self) -> () -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> () -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "preliminaryView(viewOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (viewOnDayView: DayView) -> UIView' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (viewOnDayView: CVCalendarDayView) -> UIView' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=viewOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='UIView' bind=UIKit.(file).UIView))))
+    (func_decl "preliminaryView(shouldDisplayOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (shouldDisplayOnDayView: DayView) -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (shouldDisplayOnDayView: CVCalendarDayView) -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=shouldDisplayOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "supplementaryView(viewOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (viewOnDayView: DayView) -> UIView' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (viewOnDayView: CVCalendarDayView) -> UIView' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=viewOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='UIView' bind=UIKit.(file).UIView))))
+    (func_decl "supplementaryView(shouldDisplayOnDayView:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (shouldDisplayOnDayView: DayView) -> Bool' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> (shouldDisplayOnDayView: CVCalendarDayView) -> Bool' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "dayView" apiName=shouldDisplayOnDayView type='DayView'))
+      (result
+        (type_ident
+          (component id='Bool' bind=Swift.(file).Bool))))
+    (func_decl "didShowNextMonthView(_:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (NSDate) -> ()' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> NSDate -> ()' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "date" type='NSDate')))
+    (func_decl "didShowPreviousMonthView(_:)" type='<`Self` : CVCalendarViewDelegate> (Self) -> (NSDate) -> ()' interface type='<τ_0_0 where τ_0_0 : CVCalendarViewDelegate> τ_0_0 -> NSDate -> ()' access=public @objc
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "date" type='NSDate')))))
+(source_file
+  (import_decl 'Foundation')
+  (enum_decl "CVScrollDirection" type='CVScrollDirection.Type' access=public @_fixed_layout
+    (enum_case_decl
+      (enum_element_decl "None" type='CVScrollDirection.Type -> CVScrollDirection' access=public))
+    (enum_element_decl "None" type='CVScrollDirection.Type -> CVScrollDirection' access=public)
+    (enum_case_decl
+      (enum_element_decl "Right" type='CVScrollDirection.Type -> CVScrollDirection' access=public))
+    (enum_element_decl "Right" type='CVScrollDirection.Type -> CVScrollDirection' access=public)
+    (enum_case_decl
+      (enum_element_decl "Left" type='CVScrollDirection.Type -> CVScrollDirection' access=public))
+    (enum_element_decl "Left" type='CVScrollDirection.Type -> CVScrollDirection' access=public)
+    (pattern_binding_decl
+      (pattern_typed type='String'
+        (pattern_named type='String' 'description')
+        (type_ident
+          (component id='String' bind=Swift.(file).String))))
+    (var_decl "description" type='String' access=internal storage_kind=computed)
+    (func_decl 'anonname=0x7ff34215bc00' type='(CVScrollDirection) -> () -> String' access=internal getter_for=description
+      (parameter_list
+        (parameter "self" type='CVScrollDirection'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='String' bind=Swift.(file).String)))
+      (brace_stmt
+        (switch_stmt
+          (declref_expr type='CVScrollDirection' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:18:20 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:18:20 - line:18:20] decl=CVCalendar.(file).CVScrollDirection.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:17:9 specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='CVScrollDirection' CVScrollDirection.Left))
+            (brace_stmt
+              (return_stmt
+                (call_expr implicit type='String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 - line:19:32] nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 - line:19:32] nothrow
+                    (declref_expr implicit type='String.Type -> (_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 - line:19:32] decl=Swift.(file).String.init(_builtinStringLiteral:byteSize:isASCII:) specialized=no)
+                    (type_expr implicit type='String.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 - line:19:32] typerepr='String'))
+                  (string_literal_expr type='(_builtinStringLiteral: Builtin.RawPointer, byteSize: Builtin.Word, isASCII: Builtin.Int1)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:19:32 - line:19:32] encoding=utf8 value="Left")))))
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='CVScrollDirection' CVScrollDirection.Right))
+            (brace_stmt
+              (return_stmt
+                (call_expr implicit type='String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 - line:20:33] nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 - line:20:33] nothrow
+                    (declref_expr implicit type='String.Type -> (_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 - line:20:33] decl=Swift.(file).String.init(_builtinStringLiteral:byteSize:isASCII:) specialized=no)
+                    (type_expr implicit type='String.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 - line:20:33] typerepr='String'))
+                  (string_literal_expr type='(_builtinStringLiteral: Builtin.RawPointer, byteSize: Builtin.Word, isASCII: Builtin.Int1)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:20:33 - line:20:33] encoding=utf8 value="Right")))))
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='CVScrollDirection' CVScrollDirection.None))
+            (brace_stmt
+              (return_stmt
+                (call_expr implicit type='String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 - line:21:32] nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 - line:21:32] nothrow
+                    (declref_expr implicit type='String.Type -> (_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 - line:21:32] decl=Swift.(file).String.init(_builtinStringLiteral:byteSize:isASCII:) specialized=no)
+                    (type_expr implicit type='String.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 - line:21:32] typerepr='String'))
+                  (string_literal_expr type='(_builtinStringLiteral: Builtin.RawPointer, byteSize: Builtin.Word, isASCII: Builtin.Int1)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVScrollDirection.swift:21:32 - line:21:32] encoding=utf8 value="None"))))))))
+    (func_decl implicit 'anonname=0x7ff3423201f0' type='CVScrollDirection -> () -> Int' access=public getter_for=hashValue
+      (parameter_list
+        (parameter "self" type='CVScrollDirection'))
+      (parameter_list)
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_typed implicit type='Int'
+            (pattern_named implicit type='Int' 'index')))
+        (switch_stmt
+          (declref_expr implicit type='CVScrollDirection' decl=CVCalendar.(file).CVScrollDirection.func decl.self specialized=no)
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='CVScrollDirection' CVScrollDirection._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=CVCalendar.(file).CVScrollDirection.func decl.index specialized=no)
+                (call_expr implicit type='Int' nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinIntegerLiteral: Int2048) -> Int' nothrow
+                    (declref_expr implicit type='Int.Type -> (_builtinIntegerLiteral: Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=0))))))
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='CVScrollDirection' CVScrollDirection._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=CVCalendar.(file).CVScrollDirection.func decl.index specialized=no)
+                (call_expr implicit type='Int' nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinIntegerLiteral: Int2048) -> Int' nothrow
+                    (declref_expr implicit type='Int.Type -> (_builtinIntegerLiteral: Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=1))))))
+          (case_stmt
+            (case_label_item
+            (pattern_enum_element implicit type='CVScrollDirection' CVScrollDirection._))
+            (brace_stmt
+              (assign_expr
+                (declref_expr implicit type='@lvalue Int' accessKind=write decl=CVCalendar.(file).CVScrollDirection.func decl.index specialized=no)
+                (call_expr implicit type='Int' nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinIntegerLiteral: Int2048) -> Int' nothrow
+                    (declref_expr implicit type='Int.Type -> (_builtinIntegerLiteral: Int2048) -> Int' decl=Swift.(file).Int.init(_builtinIntegerLiteral:) specialized=no)
+                    (type_expr implicit type='Int.Type' typerepr='<<NULL>>'))
+                  (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' names=_builtinIntegerLiteral
+                    (integer_literal_expr implicit type='Int2048' value=2)))))))
+        (return_stmt
+          (member_ref_expr implicit type='Int' decl=Swift.(file).Int.hashValue
+            (load_expr implicit type='Int'
+              (declref_expr implicit type='@lvalue Int' accessKind=read decl=CVCalendar.(file).CVScrollDirection.func decl.index specialized=no))))))
+    (var_decl implicit "hashValue" type='Int' access=public storage_kind=computed)
+    (pattern_binding_decl implicit
+      (pattern_typed implicit type='Int'
+        (pattern_named implicit type='Int' 'hashValue')))))
+(source_file
+  (import_decl 'UIKit')
+  (struct_decl "CVSet"<T : AnyObject> type='CVSet.Type' interface type='CVSet<τ_0_0>.Type' access=public @_fixed_layout inherits: NilLiteralConvertible
+    (pattern_binding_decl
+      (pattern_named type='[T]' 'storage')
+      (call_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:29 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:27 - line:18:31] nothrow
+        (constructor_ref_call_expr type='() -> [T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:29 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:27 - line:18:29] nothrow
+          (declref_expr implicit type='Array<T>.Type -> () -> [T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:29 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:29 - line:18:29] decl=Swift.(file).Array.init() [with T] specialized=no)
+          (type_expr type='[T].Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:27 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:27 - line:18:29] typerepr='[T]'))
+        (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:30 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:30 - line:18:31])))
+    (var_decl "storage" type='[T]' interface type='Array<τ_0_0>' access=private storage_kind=stored_with_trivial_accessors)
+    (pattern_binding_decl
+      (pattern_typed type='Int'
+        (pattern_named type='Int' 'count')
+        (type_ident
+          (component id='Int' bind=Swift.(file).Int))))
+    (var_decl "count" type='Int' access=internal storage_kind=computed)
+    (func_decl 'anonname=0x7f87f91ad800' type='<T : AnyObject> (CVSet<T>) -> () -> Int' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0> -> () -> Int' access=internal getter_for=count
+      (parameter_list
+        (parameter "self" type='CVSet<T>'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='Int' bind=Swift.(file).Int)))
+      (brace_stmt
+        (return_stmt
+          (member_ref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:22:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:22:16 - line:22:24] decl=Swift.(file).Array.count [with T]
+            (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:22:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:22:16 - line:22:16] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+              (declref_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:22:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:22:16 - line:22:16] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:21:20 specialized=no))))))
+    (pattern_binding_decl
+      (pattern_typed type='T?'
+        (pattern_named type='T?' 'last')
+))
+    (var_decl "last" type='T?' interface type='Optional<τ_0_0>' access=internal storage_kind=computed)
+    (func_decl 'anonname=0x7f87f91adc00' type='<T : AnyObject> (CVSet<T>) -> () -> T?' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0> -> () -> Optional<τ_0_0>' access=internal getter_for=last
+      (parameter_list
+        (parameter "self" type='CVSet<T>'))
+      (parameter_list)
+      (result
+)
+      (brace_stmt
+        (return_stmt
+          (member_ref_expr type='T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:26:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:26:16 - line:26:24] decl=Swift.(file).CollectionType.last [with [T][Array<T>: specialize <T> (<Element> Array<Element>: CollectionType module Swift)], IndexingGenerator<Array<T>>[IndexingGenerator<Array<T>>: specialize <Array<T>, Index, Distance, Int, _DisabledRangeIndex, T> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], T, Index[Int: BidirectionalIndexType module Swift], Distance[Int: _SignedIntegerType module Swift], Int[Int: _BuiltinIntegerLiteralConvertible module Swift], _DisabledRangeIndex, ArraySlice<T>[ArraySlice<T>: specialize <T> (<Element> ArraySlice<Element>: Indexable module Swift), ArraySlice<T>: specialize <T> (<Element> ArraySlice<Element>: SequenceType module Swift)], IndexingGenerator<ArraySlice<T>>[IndexingGenerator<ArraySlice<T>>: specialize <ArraySlice<T>, Index, Distance, Int, _DisabledRangeIndex, T> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], T, Index[Int: ForwardIndexType module Swift], Distance[Int: _SignedIntegerType module Swift], Int[Int: _BuiltinIntegerLiteralConvertible module Swift], _DisabledRangeIndex, ArraySlice<T>, T, T]
+            (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:26:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:26:16 - line:26:16] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+              (declref_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:26:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:26:16 - line:26:16] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:25:18 specialized=no))))))
+    (constructor_decl "init(nilLiteral:)" type='<T : AnyObject> CVSet<T>.Type -> (nilLiteral: ()) -> CVSet<T>' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0>.Type -> (nilLiteral: ()) -> CVSet<τ_0_0>' access=public designated
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list
+        (parameter "nilLiteral" apiName=nilLiteral type='()'))
+      (brace_stmt
+        (return_stmt)))
+    (constructor_decl "init()" type='<T : AnyObject> CVSet<T>.Type -> () -> CVSet<T>' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0>.Type -> () -> CVSet<τ_0_0>' access=internal designated
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list)
+      (brace_stmt
+        (return_stmt)))
+    (subscript_decl "subscript(_:)" type='(Int) -> T?' interface type='Int -> Optional<τ_0_0>' access=internal storage_kind=computed)
+    (func_decl 'anonname=0x7f87f91ae700' type='<T : AnyObject> (CVSet<T>) -> (Int) -> T?' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0> -> Int -> Optional<τ_0_0>' access=internal getter_for=subscript(_:)
+      (parameter_list
+        (parameter "self" type='CVSet<T>'))
+      (parameter_list
+        (parameter "index" type='Int'))
+      (result
+)
+      (brace_stmt
+        (if_stmt
+          (call_expr implicit type='Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 - line:36:32] nothrow
+            (dot_syntax_call_expr implicit type='() -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 - line:36:32] nothrow
+              (declref_expr implicit type='(Bool) -> () -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:22 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:22 - line:36:22] decl=Swift.(file).Bool._getBuiltinLogicValue() specialized=no)
+              (binary_expr type='Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:22 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 - line:36:32] nothrow
+                (declref_expr type='(Int, Int) -> Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:22 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:22 - line:36:22] decl=Swift.(file).< specialized=no)
+                (tuple_expr implicit type='(Int, Int)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 - line:36:32]
+                  (declref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 - line:36:16] decl=CVCalendar.(file).CVSet.func decl.index@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:34:15 specialized=no)
+                  (member_ref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:24 - line:36:32] decl=Swift.(file).Array.count [with T]
+                    (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:24 - line:36:24] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                      (declref_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:24 - line:36:24] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:35:9 specialized=no))))))
+            (tuple_expr implicit type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:36:16 - line:36:32]))
+          (brace_stmt
+            (return_stmt
+              (inject_into_optional implicit type='T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:31 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:24 - line:37:37]
+                (subscript_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:31 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:24 - line:37:37]  decl=Swift.(file).Array.subscript [with T]
+                  (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:24 - line:37:24] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                    (declref_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:24 - line:37:24] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:35:9 specialized=no))
+                  (paren_expr type='(Int)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:31 - line:37:37]
+                    (declref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:37:32 - line:37:32] decl=CVCalendar.(file).CVSet.func decl.index@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:34:15 specialized=no))))))
+          (brace_stmt
+            (return_stmt
+              (call_expr implicit type='T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 - line:39:24] nothrow
+                (constructor_ref_call_expr implicit type='(nilLiteral: ()) -> T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 - line:39:24] nothrow
+                  (declref_expr implicit type='Optional<T>.Type -> (nilLiteral: ()) -> T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 - line:39:24] decl=Swift.(file).Optional.init(nilLiteral:) [with T] specialized=no)
+                  (type_expr implicit type='T?.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 - line:39:24] typerepr='T?'))
+                (tuple_expr implicit type='(nilLiteral: ())' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 - line:39:24] names=nilLiteral
+                  (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:39:24 - line:39:24]))))))))
+    (func_decl implicit 'anonname=0x7f87f8c2efd0' type='<T : AnyObject> (CVSet<T>) -> () -> [T]' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0> -> () -> Array<τ_0_0>' access=private getter_for=storage
+      (parameter_list
+        (parameter "self" type='CVSet<T>'))
+      (parameter_list)
+      (brace_stmt
+        (return_stmt
+          (member_ref_expr implicit type='[T]' decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+            (declref_expr implicit type='CVSet<T>' decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 specialized=no)))))
+    (func_decl implicit 'anonname=0x7f87f8c2f230' type='<T : AnyObject> (inout CVSet<T>) -> ([T]) -> ()' interface type='<τ_0_0 where τ_0_0 : AnyObject> inout CVSet<τ_0_0> -> Array<τ_0_0> -> ()' access=private setter_for=storage
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list
+        (parameter "value" type='[T]'))
+      (brace_stmt
+        (assign_expr
+          (member_ref_expr implicit type='@lvalue [T]' accessKind=write decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+            (declref_expr implicit type='@lvalue CVSet<T>' accessKind=readwrite decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 specialized=no))
+          (declref_expr implicit type='[T]' decl=CVCalendar.(file).CVSet.func decl.value@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 specialized=no))))
+    (func_decl implicit 'anonname=0x7f87f8c2fa00' type='<T : AnyObject> (inout CVSet<T>) -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, (@convention(thin) (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer, inout CVSet<T>, @thick CVSet<T>.Type) -> ())?)' interface type='<τ_0_0 where τ_0_0 : AnyObject> inout CVSet<τ_0_0> -> (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer) -> (Builtin.RawPointer, Optional<@convention(thin) (Builtin.RawPointer, inout Builtin.UnsafeValueBuffer, inout CVSet<τ_0_0>, @thick CVSet<τ_0_0>.Type) -> ()>)' access=private materializeForSet_for=storage
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list
+        (parameter "buffer" type='Builtin.RawPointer')
+        (parameter "callbackStorage" type='inout Builtin.UnsafeValueBuffer' mutable))))
+  (extension_decl CVSet<T>
+    (func_decl "addObject(_:)" type='<T> (inout CVSet<T>) -> (T) -> ()' interface type='<τ_0_0 where τ_0_0 : AnyObject> inout CVSet<τ_0_0> -> τ_0_0 -> ()' access=public
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list
+        (parameter "object" type='T'))
+      (brace_stmt
+        (if_stmt
+          (call_expr implicit type='Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:35] nothrow
+            (dot_syntax_call_expr implicit type='() -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:35] nothrow
+              (declref_expr implicit type='(Bool) -> () -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:32 - line:49:32] decl=Swift.(file).Bool._getBuiltinLogicValue() specialized=no)
+              (binary_expr type='Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:35] nothrow
+                (declref_expr type='(Int?, Int?) -> Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:32 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:32 - line:49:32] decl=Swift.(file).== [with Int[Int: Equatable module Swift]] specialized=no)
+                (tuple_expr implicit type='(Int?, Int?)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:35]
+                  (call_expr type='Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:30] nothrow
+                    (dot_syntax_call_expr implicit type='(T) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:12] nothrow
+                      (declref_expr type='CVSet<T> -> (T) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:12] decl=CVCalendar.(file).CVSet.indexObject@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:68:10 [with T[abstract:AnyObject]] specialized=no)
+                      (load_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:12]
+                        (declref_expr implicit type='@lvalue CVSet<T>' accessKind=read location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:12] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:48:19 specialized=no)))
+                    (paren_expr type='(T)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:23 - line:49:30]
+                      (declref_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:24 - line:49:24] decl=CVCalendar.(file).CVSet.func decl.object@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:48:29 specialized=no)))
+                  (call_expr implicit type='Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 - line:49:35] nothrow
+                    (constructor_ref_call_expr implicit type='(nilLiteral: ()) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 - line:49:35] nothrow
+                      (declref_expr implicit type='Optional<Int>.Type -> (nilLiteral: ()) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 - line:49:35] decl=Swift.(file).Optional.init(nilLiteral:) [with Int] specialized=no)
+                      (type_expr implicit type='Int?.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 - line:49:35] typerepr='Int?'))
+                    (tuple_expr implicit type='(nilLiteral: ())' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 - line:49:35] names=nilLiteral
+                      (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:35 - line:49:35]))))))
+            (tuple_expr implicit type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:49:12 - line:49:35]))
+          (brace_stmt
+            (call_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 - line:50:34] nothrow
+              (dot_syntax_call_expr type='(T) -> ()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 - line:50:21] nothrow
+                (declref_expr type='inout Array<T> -> (T) -> ()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:21 - line:50:21] decl=Swift.(file).Array.append [with T] specialized=no)
+                (inout_expr implicit type='inout Array<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 - line:50:13]
+                  (member_ref_expr type='@lvalue [T]' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 - line:50:13] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                    (declref_expr implicit type='@lvalue CVSet<T>' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:13 - line:50:13] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:48:19 specialized=no))))
+              (paren_expr type='(T)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:28 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:27 - line:50:34]
+                (declref_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:28 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:50:28 - line:50:28] decl=CVCalendar.(file).CVSet.func decl.object@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:48:29 specialized=no)))))))
+    (func_decl "removeObject(_:)" type='<T> (inout CVSet<T>) -> (T) -> ()' interface type='<τ_0_0 where τ_0_0 : AnyObject> inout CVSet<τ_0_0> -> τ_0_0 -> ()' access=public
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list
+        (parameter "object" type='T'))
+      (brace_stmt
+        (if_stmt
+          (pattern
+            (optional_some_element implicit type='Int?'
+              (pattern_let implicit type='Int'
+                (pattern_named type='Int' 'index')))
+            (call_expr type='Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 - line:55:42] nothrow
+              (dot_syntax_call_expr implicit type='(T) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 - line:55:24] nothrow
+                (declref_expr type='CVSet<T> -> (T) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 - line:55:24] decl=CVCalendar.(file).CVSet.indexObject@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:68:10 [with T[abstract:AnyObject]] specialized=no)
+                (load_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 - line:55:24]
+                  (declref_expr implicit type='@lvalue CVSet<T>' accessKind=read location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:24 - line:55:24] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:54:19 specialized=no)))
+              (paren_expr type='(T)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:35 - line:55:42]
+                (declref_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:36 - line:55:36] decl=CVCalendar.(file).CVSet.func decl.object@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:54:32 specialized=no))))
+          (brace_stmt
+            (call_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 - line:56:40] nothrow
+              (dot_syntax_call_expr type='(Int) -> T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 - line:56:21] nothrow
+                (declref_expr type='inout Array<T> -> (Int) -> T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:21 - line:56:21] decl=Swift.(file).Array.removeAtIndex [with T] specialized=no)
+                (inout_expr implicit type='inout Array<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 - line:56:13]
+                  (member_ref_expr type='@lvalue [T]' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 - line:56:13] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                    (declref_expr implicit type='@lvalue CVSet<T>' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:13 - line:56:13] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:54:19 specialized=no))))
+              (paren_expr type='(Int)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:34 - line:56:40]
+                (declref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:35 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:56:35 - line:56:35] decl=CVCalendar.(file).CVSet.func decl.index@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:55:16 specialized=no)))))))
+    (func_decl "removeAll(_:)" type='<T> (inout CVSet<T>) -> (Bool) -> ()' interface type='<τ_0_0 where τ_0_0 : AnyObject> inout CVSet<τ_0_0> -> Bool -> ()' access=public
+      (parameter_list
+        (parameter "self" type='inout CVSet<T>' mutable))
+      (parameter_list
+        (parameter "keepCapacity" type='Bool'))
+      (brace_stmt
+        (call_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:17 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 - line:61:53] nothrow
+          (dot_syntax_call_expr type='(keepCapacity: Bool) -> ()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:17 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 - line:61:17] nothrow
+            (declref_expr type='inout Array<T> -> (keepCapacity: Bool) -> ()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:17 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:17 - line:61:17] decl=Swift.(file).Array.removeAll(keepCapacity:) [with T] specialized=no)
+            (inout_expr implicit type='inout Array<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 - line:61:9]
+              (member_ref_expr type='@lvalue [T]' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 - line:61:9] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                (declref_expr implicit type='@lvalue CVSet<T>' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:9 - line:61:9] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:60:19 specialized=no))))
+          (tuple_shuffle_expr implicit type='(keepCapacity: Bool)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:26 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:26 - line:61:53] elements=[0] variadic_sources=[]
+            (tuple_expr type='(keepCapacity: Bool)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:26 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:26 - line:61:53] names=keepCapacity
+              (declref_expr type='Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:41 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:61:41 - line:61:41] decl=CVCalendar.(file).CVSet.func decl.keepCapacity@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:60:29 specialized=no)))))))
+  (extension_decl CVSet<T>
+    (func_decl "indexObject(_:)" type='<T> (CVSet<T>) -> (T) -> Int?' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0> -> τ_0_0 -> Optional<Int>' access=private
+      (parameter_list
+        (parameter "self" type='CVSet<T>'))
+      (parameter_list
+        (parameter "object" type='T'))
+      (result
+)
+      (brace_stmt
+        (for_each_stmt
+          (pattern_tuple type='(Int, T)' names='',''
+            (pattern_named type='Int' 'index')
+            (pattern_named type='T' 'storageObj'))
+          (pattern_tuple type='(Int, T)' names='',''
+            (pattern_named type='Int' 'index')
+            (pattern_named type='T' 'storageObj'))
+          (call_expr type='EnumerateSequence<[T]>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:54] nothrow
+            (dot_syntax_call_expr type='() -> EnumerateSequence<[T]>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:44] nothrow
+              (declref_expr type='[T] -> () -> EnumerateSequence<[T]>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 - line:69:44] decl=Swift.(file).SequenceType.enumerate() [with [T][[T]: specialize <T> (<Element> Array<Element>: SequenceType module Swift)], IndexingGenerator<Array<T>>[IndexingGenerator<Array<T>>: specialize <Array<T>, Index, Distance, Int, _DisabledRangeIndex, T> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], T, ArraySlice<T>] specialized=no)
+              (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:36] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                (declref_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:36] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:68:10 specialized=no)))
+            (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:53 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:53 - line:69:54]))
+          (pattern_binding_decl implicit
+            (pattern_named implicit '$generator')
+            (call_expr implicit type='EnumerateGenerator<IndexingGenerator<Array<T>>>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:54] nothrow
+              (dot_syntax_call_expr implicit type='() -> EnumerateGenerator<IndexingGenerator<Array<T>>>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:54] nothrow
+                (declref_expr implicit type='EnumerateSequence<[T]> -> () -> EnumerateGenerator<IndexingGenerator<Array<T>>>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:54 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:54 - line:69:54] decl=Swift.(file).EnumerateSequence.generate() [with [T][[T]: specialize <T> (<Element> Array<Element>: SequenceType module Swift)], IndexingGenerator<Array<T>>[IndexingGenerator<Array<T>>: specialize <Array<T>, Index, Distance, Int, _DisabledRangeIndex, T> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], T, ArraySlice<T>] specialized=no)
+                (call_expr type='EnumerateSequence<[T]>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:54] nothrow
+                  (dot_syntax_call_expr type='() -> EnumerateSequence<[T]>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:44] nothrow
+                    (declref_expr type='[T] -> () -> EnumerateSequence<[T]>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:44 - line:69:44] decl=Swift.(file).SequenceType.enumerate() [with [T][[T]: specialize <T> (<Element> Array<Element>: SequenceType module Swift)], IndexingGenerator<Array<T>>[IndexingGenerator<Array<T>>: specialize <Array<T>, Index, Distance, Int, _DisabledRangeIndex, T> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], T, ArraySlice<T>] specialized=no)
+                    (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:36] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                      (declref_expr implicit type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:36] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:68:10 specialized=no)))
+                  (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:53 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:53 - line:69:54])))
+              (tuple_expr implicit type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:36 - line:69:54])))
+          (optional_evaluation_expr implicit type='(Int, T)?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33]
+            (inject_into_optional implicit type='(Int, T)?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33]
+              (tuple_shuffle_expr implicit type='(Int, T)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33] elements=[0, 1] variadic_sources=[]
+                (bind_optional_expr implicit type='(index: Int, element: T)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33] depth=0
+                  (call_expr implicit type='(index: Int, element: T)?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33] nothrow
+                    (dot_syntax_call_expr implicit type='() -> (index: Int, element: T)?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33] nothrow
+                      (declref_expr implicit type='inout EnumerateGenerator<IndexingGenerator<Array<T>>> -> () -> (index: Int, element: T)?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33] decl=Swift.(file).EnumerateGenerator.next() [with IndexingGenerator<Array<T>>[IndexingGenerator<Array<T>>: specialize <Array<T>, Index, Distance, Int, _DisabledRangeIndex, T> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], T] specialized=no)
+                      (inout_expr implicit type='inout EnumerateGenerator<IndexingGenerator<Array<T>>>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33]
+                        (declref_expr implicit type='@lvalue EnumerateGenerator<IndexingGenerator<Array<T>>>' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33] decl=CVCalendar.(file).CVSet.func decl.$generator@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 direct_to_storage specialized=no)))
+                    (tuple_expr implicit type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:33 - line:69:33]))))))
+          (brace_stmt
+            (if_stmt
+              (call_expr implicit type='Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:31] nothrow
+                (dot_syntax_call_expr implicit type='() -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:31] nothrow
+                  (declref_expr implicit type='(Bool) -> () -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:27 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:27 - line:70:27] decl=Swift.(file).Bool._getBuiltinLogicValue() specialized=no)
+                  (binary_expr type='Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:27 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:31] nothrow
+                    (declref_expr type='(AnyObject?, AnyObject?) -> Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:27 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:27 - line:70:27] decl=Swift.(file).=== specialized=no)
+                    (tuple_expr implicit type='(AnyObject?, AnyObject?)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:31]
+                      (inject_into_optional implicit type='AnyObject?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:16]
+                        (erasure_expr implicit type='AnyObject' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:16]
+                          (declref_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:16] decl=CVCalendar.(file).CVSet.func decl.storageObj@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:21 specialized=no)))
+                      (inject_into_optional implicit type='AnyObject?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:31 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:31 - line:70:31]
+                        (erasure_expr implicit type='AnyObject' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:31 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:31 - line:70:31]
+                          (declref_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:31 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:31 - line:70:31] decl=CVCalendar.(file).CVSet.func decl.object@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:68:22 specialized=no))))))
+                (tuple_expr implicit type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:70:16 - line:70:31]))
+              (brace_stmt
+                (return_stmt
+                  (inject_into_optional implicit type='Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:71:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:71:24 - line:71:24]
+                    (declref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:71:24 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:71:24 - line:71:24] decl=CVCalendar.(file).CVSet.func decl.index@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:69:14 specialized=no)))))))
+        (return_stmt
+          (call_expr implicit type='Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 - line:75:16] nothrow
+            (constructor_ref_call_expr implicit type='(nilLiteral: ()) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 - line:75:16] nothrow
+              (declref_expr implicit type='Optional<Int>.Type -> (nilLiteral: ()) -> Int?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 - line:75:16] decl=Swift.(file).Optional.init(nilLiteral:) [with Int] specialized=no)
+              (type_expr implicit type='Int?.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 - line:75:16] typerepr='Int?'))
+            (tuple_expr implicit type='(nilLiteral: ())' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 - line:75:16] names=nilLiteral
+              (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:75:16 - line:75:16])))))))
+  (extension_decl CVSet<T> inherits: SequenceType
+    (func_decl "generate()" type='<T> (CVSet<T>) -> () -> AnyGenerator<T>' interface type='<τ_0_0 where τ_0_0 : AnyObject> CVSet<τ_0_0> -> () -> AnyGenerator<τ_0_0>' access=public
+      (parameter_list
+        (parameter "self" type='CVSet<T>'))
+      (parameter_list)
+      (result
+        (type_ident
+          (component id='AnyGenerator' bind=Swift.(file).AnyGenerator)
+            (type_ident
+              (component id='T' bind=CVCalendar.(file).CVSet.T))))
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_named type='Int' 'power')
+          (call_expr implicit type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 - line:83:21] nothrow
+            (constructor_ref_call_expr implicit type='(_builtinIntegerLiteral: Int2048) -> Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 - line:83:21] nothrow
+              (declref_expr implicit type='Int.Type -> (_builtinIntegerLiteral: Int2048) -> Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 - line:83:21] decl=Swift.(file).Int.init(_builtinIntegerLiteral:) specialized=no)
+              (type_expr implicit type='Int.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 - line:83:21] typerepr='Int'))
+            (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 - line:83:21] names=_builtinIntegerLiteral
+              (integer_literal_expr type='Int2048' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:21 - line:83:21] value=0))))
+        (var_decl "power" type='Int' access=private storage_kind=stored)
+        (pattern_binding_decl
+          (pattern_typed type='() -> T?'
+            (pattern_named type='() -> T?' 'nextClosure')
+            (type_function
+              (type_tuple)
+))
+          (closure_expr type='() -> T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:84:38 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:84:38 - line:86:9] discriminator=0 captures=(power, self) single-expression
+            (parameter_list)
+            (if_expr type='T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:34 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 - line:85:60]
+              (call_expr implicit type='Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 - line:85:32] nothrow
+                (dot_syntax_call_expr implicit type='() -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 - line:85:32] nothrow
+                  (declref_expr implicit type='(Bool) -> () -> Int1' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:20 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:20 - line:85:20] decl=Swift.(file).Bool._getBuiltinLogicValue() specialized=no)
+                  (paren_expr type='(Bool)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:20 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 - line:85:32]
+                    (binary_expr type='Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:20 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 - line:85:27] nothrow
+                      (declref_expr type='(Int, Int) -> Bool' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:20 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:20 - line:85:20] decl=Swift.(file).< specialized=no)
+                      (tuple_expr implicit type='(Int, Int)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 - line:85:27]
+                        (load_expr implicit type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 - line:85:14]
+                          (declref_expr type='@lvalue Int' accessKind=read location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:14 - line:85:14] decl=CVCalendar.(file).CVSet.func decl.power@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:13 specialized=no))
+                        (member_ref_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:27 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:22 - line:85:27] decl=CVCalendar.(file).CVSet.count@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:21:9 [with T[abstract:AnyObject]]
+                          (declref_expr type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:22 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:22 - line:85:22] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:82:17 specialized=no))))))
+                (tuple_expr implicit type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:13 - line:85:32]))
+              (inject_into_optional implicit type='T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:48 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:36 - line:85:56]
+                (subscript_expr type='T' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:48 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:36 - line:85:56]  decl=Swift.(file).Array.subscript [with T]
+                  (member_ref_expr type='[T]' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:41 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:36 - line:85:41] decl=CVCalendar.(file).CVSet.storage@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:18:17 [with T[abstract:AnyObject]] direct_to_storage
+                    (declref_expr type='CVSet<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:36 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:36 - line:85:36] decl=CVCalendar.(file).CVSet.func decl.self@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:82:17 specialized=no))
+                  (paren_expr type='(Int)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:54 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:48 - line:85:56]
+                    (postfix_unary_expr type='Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:54 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:49 - line:85:54] nothrow
+                      (declref_expr type='(inout Int) -> Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:54 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:54 - line:85:54] decl=Swift.(file).++ specialized=no)
+                      (inout_expr implicit type='inout Int' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:49 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:49 - line:85:49]
+                        (declref_expr type='@lvalue Int' accessKind=readwrite location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:49 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:49 - line:85:49] decl=CVCalendar.(file).CVSet.func decl.power@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:83:13 specialized=no))))))
+              (call_expr implicit type='T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 - line:85:60] nothrow
+                (constructor_ref_call_expr implicit type='(nilLiteral: ()) -> T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 - line:85:60] nothrow
+                  (declref_expr implicit type='Optional<T>.Type -> (nilLiteral: ()) -> T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 - line:85:60] decl=Swift.(file).Optional.init(nilLiteral:) [with T] specialized=no)
+                  (type_expr implicit type='T?.Type' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 - line:85:60] typerepr='T?'))
+                (tuple_expr implicit type='(nilLiteral: ())' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 - line:85:60] names=nilLiteral
+                  (tuple_expr type='()' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:85:60 - line:85:60]))))))
+        (var_decl "nextClosure" type='() -> T?' access=private let storage_kind=stored)
+        (return_stmt
+          (call_expr type='AnyGenerator<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:16 - line:87:40] nothrow
+            (declref_expr type='(() -> T?) -> AnyGenerator<T>' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:16 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:16 - line:87:16] decl=Swift.(file).anyGenerator [with T] specialized=no)
+            (paren_expr type='(() -> T?)' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:29 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:28 - line:87:40]
+              (declref_expr type='() -> T?' location=/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:29 range=[/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:87:29 - line:87:29] decl=CVCalendar.(file).CVSet.func decl.nextClosure@/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift:84:13 specialized=no))))))
+    (typealias implicit "Generator" type='Generator.Type' interface type='AnyGenerator<τ_0_0>.Type' access=public type='AnyGenerator<T>')
+    (typealias implicit "SubSequence" type='SubSequence.Type' interface type='AnySequence<τ_0_0>.Type' access=public type='AnySequence<T>')))
