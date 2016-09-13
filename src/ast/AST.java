@@ -1,8 +1,7 @@
-package nodes;
+package ast;
 
 import java.util.List;
 
-import ast.ASTNodeFactory;
 import util.Util;
 
 //Starting point of the ast - basically parses source files.

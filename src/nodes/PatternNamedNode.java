@@ -1,5 +1,6 @@
 package nodes;
 
+import ast.ASTNode;
 import util.Util;
 
 public class PatternNamedNode extends ASTNode {

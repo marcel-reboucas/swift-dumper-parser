@@ -2,8 +2,6 @@ package ast;
 
 import java.lang.reflect.InvocationTargetException;
 
-import nodes.ASTNode;
-
 public class ASTNodeFactory {
 
 	@SuppressWarnings("unchecked")

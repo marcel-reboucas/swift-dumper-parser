@@ -1,6 +1,6 @@
-package swiftanalysis;
+package analysis;
 
-import nodes.AST;
+import ast.AST;
 
 public class DumperParser {
 	

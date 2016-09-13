@@ -1,9 +1,8 @@
-package nodes;
+package ast;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ast.ASTNodeFactory;
 import util.Util;
 
 public abstract class ASTNode {

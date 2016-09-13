@@ -1,16 +1,16 @@
-package swiftanalysis;
+package analysis;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import nodes.AST;
+import ast.AST;
 import util.Util;
 
 /**
  * Analyzes given Swift projects with the analyzer of choice.
  */
-public class SwiftDumperAnalyzer {
+public class Main {
 
 	 //private static Formatter formatter = new JSONFormatter();
 	 //private static Printer printer = new Printer(formatter);
