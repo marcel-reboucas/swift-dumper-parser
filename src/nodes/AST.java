@@ -5,7 +5,7 @@ import java.util.List;
 import ast.ASTNodeFactory;
 import util.Util;
 
-//Starting point of the ast.
+//Starting point of the ast - basically parses source files.
 public class AST extends ASTNode {
 
 	public AST(String contents) {
@@ -18,6 +18,7 @@ public class AST extends ASTNode {
     	ASTNodeFactory factory = new ASTNodeFactory();
     	
     	for (String childNodeString : childNodeStrings) {	
+    		
     		ASTNode node = factory.createNode(childNodeString);
     		
     		if (node != null) {
