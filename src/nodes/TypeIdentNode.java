@@ -2,9 +2,9 @@ package nodes;
 
 import util.Util;
 
-public class FuncDeclNode extends ASTNode {
+public class TypeIdentNode extends ASTNode {
 	
-	public FuncDeclNode(String contents) {
+	public TypeIdentNode(String contents) {
 		super(contents);
 	}
 
@@ -12,7 +12,7 @@ public class FuncDeclNode extends ASTNode {
 	public void prettyPrint(int ident) {
 		
 		String identation = Util.getTabsForIdentationAmmount(ident);
-		System.out.println(identation + "Func Decl: " + nodeInfo);
+		System.out.println(identation + "Type Ident: " + nodeInfo);
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
 	}
 

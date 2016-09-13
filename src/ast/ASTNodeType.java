@@ -12,8 +12,10 @@ public enum ASTNodeType {
     Parameter("parameter", ParameterNode.class),
     EnumDecl("enum_decl", EnumDeclNode.class),
     EnumElementDecl("enum_element_decl", EnumElementDeclNode.class),
+    Component("component", ComponentNode.class),
+    TypeIdent("type_ident", TypeIdentNode.class),
+    Result("result", ResultNode.class),
     ;
-	
 	
 	public String identifier;
 	public Class clazz;

@@ -10,7 +10,12 @@ public class ASTNodeFactory {
 	public ASTNode createNode(String nodeString) {
 
 		ASTNode result = null;
-		String identifier = nodeString.substring(1, nodeString.indexOf(' '));
+	
+		// Tries to find (identifier ...) or (identifier)
+		int endingIndex = nodeString.indexOf(' ') > 0 ? nodeString.indexOf(' ') : 
+			nodeString.indexOf(')');
+		
+		String identifier = nodeString.substring(1, endingIndex);
 
 		ASTNodeType type = ASTNodeType.typeFromIdentifier(identifier);
 

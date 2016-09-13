@@ -12,7 +12,6 @@ public class AST extends ASTNode {
 		super(contents);
 	}
 
-	@Override
     public final void parseString(String str) {
     	
     	List<String> childNodeStrings = Util.getNextNodeStrings(str);
