@@ -43,8 +43,6 @@ public enum ASTNodeType {
     PostfixOperatorDecl("postfix_operator_decl", PostfixOperatorDeclNode.class),
     Module("module", ModuleNode.class),
     TupleExpr("tuple_expr", TupleExprNode.class),
-    
-    
     ErrorExpr("error_expr", ErrorExprNode.class),
     NilLiteralExpr("nil_literal_expr", NilLiteralExprNode.class),
     IntegerLiteralExpr("integer_literal_expr", IntegerLiteralExprNode.class),
