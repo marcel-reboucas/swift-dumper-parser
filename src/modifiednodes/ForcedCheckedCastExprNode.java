@@ -1,4 +1,4 @@
-package nodes;
+package modifiednodes;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -6,13 +6,11 @@ import java.util.regex.Pattern;
 import ast.ASTNode;
 import util.Util;
 
-public class VarDeclNode extends ASTNode {
+public class ForcedCheckedCastExprNode extends ASTNode {
 	
-	public String name;
-	public String type;
-	public boolean isLet;
+	String type;
 	
-	public VarDeclNode(String contents) {
+	public ForcedCheckedCastExprNode(String contents) {
 		super(contents);
 	}
 
@@ -21,7 +19,7 @@ public class VarDeclNode extends ASTNode {
 		
 		String identation = Util.getTabsForIdentationAmmount(ident);
 		String className = this.getClass().getSimpleName();
-		System.out.println(identation + className + ": " + "Name: "+ this.name +", Type: "+ this.type + ", isLet :"+isLet);
+		System.out.println(identation + className + ": " + nodeInfo);
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
 	}
 	
@@ -29,19 +27,8 @@ public class VarDeclNode extends ASTNode {
 
 		super.parseString(str);
 		
-		if (nodeInfo.contains(" let ")) {
-			this.isLet = true;
-		}
-		
-		Pattern pattern = Util.getRegexPatternBetweenQuotationMarks();
+		Pattern pattern = Util.getRegexPatternForType();
 		Matcher matcher = pattern.matcher(nodeInfo);
-				
-		if (matcher.find()){
-			this.name = matcher.group(1);
-		}
-		
-		pattern = Util.getRegexPatternForType();
-		matcher = pattern.matcher(nodeInfo);
 				
 		if (matcher.find()){
 			this.type = matcher.group(1);

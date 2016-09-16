@@ -1,5 +1,13 @@
 package ast;
 
+import modifiednodes.ConditionalCheckedCastExprNode;
+import modifiednodes.ForceValueExprNode;
+import modifiednodes.ForcedCheckedCastExprNode;
+import modifiednodes.GuardStmtNode;
+import modifiednodes.IfStmtNode;
+import modifiednodes.OptionalSomeElementNode;
+import modifiednodes.PatternLetNode;
+import modifiednodes.VarDeclNode;
 import nodes.*;
 
 public enum ASTNodeType {
@@ -15,6 +23,7 @@ public enum ASTNodeType {
     Component("component", ComponentNode.class),
     TypeIdent("type_ident", TypeIdentNode.class),
     Result("result", ResultNode.class),
+    Pattern("pattern", PatternNode.class),
     PatternParen("pattern_paren", PatternParenNode.class),
     PatternTuple("pattern_tuple", PatternTupleNode.class),
     PatternNamed("pattern_named", PatternNamedNode.class),
@@ -169,6 +178,8 @@ public enum ASTNodeType {
     ThrowStmt("throw_stmt", ThrowStmtNode.class),
     DoCatchStmt("do_catch_stmt", DoCatchStmtNode.class),
     Catch_("catch", CatchNode.class),
+    ForcedCheckedCastExpr("forced_checked_cast_expr", ForcedCheckedCastExprNode.class),
+    ConditionalCheckedCastExpr("conditional_checked_cast_expr", ConditionalCheckedCastExprNode.class),
     ;
 	
 	public String identifier;

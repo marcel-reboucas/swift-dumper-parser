@@ -3,9 +3,9 @@ package nodes;
 import ast.ASTNode;
 import util.Util;
 
-public class ForceValueExprNode extends ASTNode {
+public class PatternNode extends ASTNode {
 	
-	public ForceValueExprNode(String contents) {
+	public PatternNode(String contents) {
 		super(contents);
 	}
 

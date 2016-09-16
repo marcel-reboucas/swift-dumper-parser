@@ -1,0 +1,48 @@
+	private static int ifCounter = 0; 									//// OK
+	private static int ifWithNilCheckCounter = 0;
+	private static int ifLetCounter = 0; 								//// OK
+	private static int guardCounter = 0; 								//// OK
+	private static int guardWithNilCheckCounter = 0;
+	private static int guardLetCounter = 0; 							//// OK
+	private static int nilCoalescingCounter = 0;
+	private static int equalsNilCounter = 0;
+	private static int optionalChainingCounter = 0;
+	private static int forcedUnwrappingsCounter = 0;
+
+	private static int forcedTypeCastingCounter = 0;
+	private static int optionalTypeCastingCounter = 0;
+
+	private static int doBlockCounter = 0;
+	private static int tryCounter = 0; 									//// OK
+	private static int optionalTryCounter = 0; 							//// OK
+	private static int forcedTryCounter = 0; 							//// OK
+	private static int throwCounter = 0; 								//// OK
+	private static int throwsCounter = 0; 
+	private static int rethrowsCounter = 0;
+	
+	private static int catchCounter = 0;
+	private static int catchEmptyBlockCounter = 0;
+	private static int catchChecksTypeCounter = 0;
+	private static int catchChecksValueCounter = 0;
+	private static int genericCatchCounter = 0;
+	private static int genericCatchEmptyBlockCounter = 0;
+	private static int whereClauseInCatchCounter = 0;
+	private static int printCatch = 0;
+	
+	private static int implicitVariableDeclarationsCounter = 0; 		//// OK
+	private static int explicitVariableDeclarationsCounter = 0; 		//// OK
+	private static int implicitConstantDeclarationsCounter = 0; 		//// OK
+	private static int explicitConstantDeclarationsCounter = 0; 		//// OK
+
+	private static Map<String, Integer> typeMap = new HashMap<String, Integer>();
+	private static Map<String, Integer> optionalTypeMap = new HashMap<String, Integer>();
+	private static Map<String, Integer> forcedTypeMap = new HashMap<String, Integer>();
+
+
+
+
+
+
+	(optional_some_element implicit type='Int?'
+              (pattern_let implicit type='Int'
+                (pattern_named type='Int' 'index')))
