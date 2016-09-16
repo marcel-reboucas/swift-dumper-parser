@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class Util {
 	
@@ -57,7 +58,10 @@ public class Util {
     	            if (c == ')') b--;
     	            else if (c == '(') b++;
     	        }
-    	        list.add(sb.toString());
+    	        
+    	        if (!sb.toString().equals("()")) {
+    	        	list.add(sb.toString());
+    	        }
     	    }
     	}
     	
@@ -75,4 +79,15 @@ public class Util {
     	return sb.toString();
     }
     
+    public static Pattern getRegexPatternBetweenQuotationMarks() {
+    	return Pattern.compile("(?<=\")(.*?)(?=\")");
+    }
+    
+    public static Pattern getRegexPatternBetweenSingleQuotationMarks() {
+    	return Pattern.compile("(?<=\')(.*?)(?=\')");
+    }
+    
+    public static Pattern getRegexPatternForType() {
+    	return Pattern.compile("(?<=type=\')(.*?)(?=\')");
+    }
 }
