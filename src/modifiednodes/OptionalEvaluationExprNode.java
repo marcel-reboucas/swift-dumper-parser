@@ -1,11 +1,11 @@
-package nodes;
+package modifiednodes;
 
 import ast.ASTNode;
 import util.Util;
 
-public class CatchNode extends ASTNode {
+public class OptionalEvaluationExprNode extends ASTNode {
 	
-	public CatchNode(String contents) {
+	public OptionalEvaluationExprNode(String contents) {
 		super(contents);
 	}
 

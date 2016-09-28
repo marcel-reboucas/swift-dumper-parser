@@ -1,12 +1,21 @@
 package ast;
 
+import modifiednodes.CatchNode;
+import modifiednodes.ClassDeclNode;
 import modifiednodes.ConditionalCheckedCastExprNode;
+import modifiednodes.DoCatchStmtNode;
+import modifiednodes.ForceTryExprNode;
 import modifiednodes.ForceValueExprNode;
 import modifiednodes.ForcedCheckedCastExprNode;
+import modifiednodes.FuncDeclNode;
 import modifiednodes.GuardStmtNode;
+import modifiednodes.IfExprNode;
 import modifiednodes.IfStmtNode;
+import modifiednodes.OptionalEvaluationExprNode;
 import modifiednodes.OptionalSomeElementNode;
+import modifiednodes.OptionalTryExprNode;
 import modifiednodes.PatternLetNode;
+import modifiednodes.TryExprNode;
 import modifiednodes.VarDeclNode;
 import nodes.*;
 

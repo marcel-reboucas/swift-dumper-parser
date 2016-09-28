@@ -10,7 +10,7 @@ public abstract class ASTNode {
 	protected String nodeInfo;
 	protected List<ASTNode> children;
 
-	protected boolean isImplicit;
+	public boolean isImplicit;
 	
 	public ASTNode(String contents) {
 		this.nodeInfo = "";
@@ -48,13 +48,15 @@ public abstract class ASTNode {
 		}
 	}
 
-	public List<ASTNode> containsChildrenOfType (ASTNodeType type) {
+	public List<ASTNode> containsChildrenOfType (ASTNodeType type, boolean allowsImplicit) {
 	        
 	    	List<ASTNode> nodes = new ArrayList<ASTNode>();
 
 	    	for (ASTNode child : children) {
 	    		if (type.clazz.isInstance(child)){
-	    			nodes.add(child);
+	    			if (allowsImplicit || !child.isImplicit){
+	    				nodes.add(child);
+	    			}
 	    		}	
 	    	}
 	    	return nodes;

@@ -33,9 +33,9 @@ public class IfStmtNode extends ASTNode {
 		isIfLet = false;
 		
 		//checks if is ifLet
-		List<ASTNode> patternNodes = this.containsChildrenOfType(ASTNodeType.Pattern);
+		List<ASTNode> patternNodes = this.containsChildrenOfType(ASTNodeType.Pattern, true);
 		for (ASTNode node : patternNodes) {
-			List<ASTNode> optionalSomeNodes = node.containsChildrenOfType(ASTNodeType.OptionalSomeElement);
+			List<ASTNode> optionalSomeNodes = node.containsChildrenOfType(ASTNodeType.OptionalSomeElement, true);
 			
 			if (!optionalSomeNodes.isEmpty()) {
 				isIfLet = true;

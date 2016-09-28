@@ -1,11 +1,11 @@
-package nodes;
+package modifiednodes;
 
 import ast.ASTNode;
 import util.Util;
 
-public class IfExprNode extends ASTNode {
+public class ForceTryExprNode extends ASTNode {
 	
-	public IfExprNode(String contents) {
+	public ForceTryExprNode(String contents) {
 		super(contents);
 	}
 
