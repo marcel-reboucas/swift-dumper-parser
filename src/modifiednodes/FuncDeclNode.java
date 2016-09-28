@@ -1,9 +1,12 @@
 package modifiednodes;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import ast.ASTNode;
+import ast.ASTNodeType;
 import util.Util;
 
 public class FuncDeclNode extends ASTNode {
@@ -13,6 +16,8 @@ public class FuncDeclNode extends ASTNode {
 	String name; 
 	String type;
 	boolean anonymous;
+	public int numberOfParameters;
+	public List<String> parameterTypes;
 	
 	public FuncDeclNode(String contents) {
 		super(contents);
@@ -25,13 +30,16 @@ public class FuncDeclNode extends ASTNode {
 		String className = this.getClass().getSimpleName();
 		System.out.println(identation + className + ": " + 
 		" name: "+name +
-		" type: "+type);
+		" type: "+type + 
+		" numberOfParameters: "+numberOfParameters +
+		" parameterTypes: "+parameterTypes);
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
 	}
 
 	public void parseString(String str) {
 
 		super.parseString(str);
+		parameterTypes = new ArrayList<String>();
 		
 		if (nodeInfo.indexOf("brace_stmt") != -1){
 			nodeInfo = nodeInfo.substring(0,nodeInfo.indexOf("brace_stmt"));
@@ -56,6 +64,20 @@ public class FuncDeclNode extends ASTNode {
 			this.anonymous = name.contains("anonname");
 		} else {
 			this.anonymous = true;
+		}
+		
+		//parameters
+		List<ASTNode> listNodes = this.containsChildrenOfType(ASTNodeType.ParameterList, false);
+		for (ASTNode listNode : listNodes) {
+			List<ASTNode> parameters = listNode.containsChildrenOfType(ASTNodeType.Parameter, false);
+			
+			for (ASTNode parameterNode : parameters){
+				ParameterNode parameter = (ParameterNode) parameterNode;
+				if (parameter.name != null && !parameter.name.toLowerCase().equals("self")) {
+					numberOfParameters += 1;
+					parameterTypes.add(parameter.type);
+				}
+			}
 		}
 		
 	}

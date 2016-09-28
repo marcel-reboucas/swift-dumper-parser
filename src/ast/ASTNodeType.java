@@ -14,6 +14,8 @@ import modifiednodes.IfStmtNode;
 import modifiednodes.OptionalEvaluationExprNode;
 import modifiednodes.OptionalSomeElementNode;
 import modifiednodes.OptionalTryExprNode;
+import modifiednodes.ParameterListNode;
+import modifiednodes.ParameterNode;
 import modifiednodes.PatternLetNode;
 import modifiednodes.TryExprNode;
 import modifiednodes.VarDeclNode;
