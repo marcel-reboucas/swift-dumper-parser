@@ -1,9 +1,10 @@
 package metrics;
 
 public enum MetricType {
-	NUMBER_OF_INSTANCE_VARIABLES(Integer.class, false),
+	NUMBER_OF_INSTANCE_VARIABLES(Integer.class, true),
 	NUMBER_OF_METHODS(Integer.class, false), 
-	NUMBER_OF_CONSTRUCTORS(Integer.class, false),
+	NUMBER_OF_CONSTRUCTORS(Integer.class, true),
+	NUMBER_OF_PARAMETERS(Integer.class, true),
 	NUMBER_OF_IFS(Integer.class, false),
 	NUMBER_OF_IF_LETS(Integer.class, false),
 	NUMBER_OF_GUARDS(Integer.class, false),

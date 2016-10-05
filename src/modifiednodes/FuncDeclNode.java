@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 
 import ast.ASTNode;
 import ast.ASTNodeType;
+import metrics.MetricType;
 import util.Util;
 
 public class FuncDeclNode extends ASTNode {
@@ -84,6 +85,7 @@ public class FuncDeclNode extends ASTNode {
 	
 public void fillMetricContainer() {
 		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_PARAMETERS, this.numberOfParameters);
 		super.fillMetricContainer();
 	}
 }
