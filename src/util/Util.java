@@ -22,6 +22,7 @@ public class Util {
 			br = new BufferedReader(new InputStreamReader(is));
 			while ((line = br.readLine()) != null) {
 				sb.append(line);
+				sb.append('\n');
 			}
 
 		} catch (IOException e) {
@@ -39,16 +40,24 @@ public class Util {
 		return sb.toString();
 
 	}
+	
     
     public static List<String> getNextNodeStrings(String str) {
     	
     	List<String> list = new ArrayList<String>();
     	int strLen = str.length();
 
+    	// `afterNewLine` serves to avoid creating new nodes when parentheses appear
+    	// on the same line, e.g. in types.
+    	boolean afterNewLine = false;
+    	
     	for (int i = 0; i < strLen; i++) {
     	    char c = str.charAt(i);
 
-    	    if (c == '(') {
+    	    if (c == '\n'){
+    	    	afterNewLine = true;
+    	    }
+    	    if (afterNewLine && c == '(') {
     	        int b = 1;
     	        StringBuilder sb = new StringBuilder("(");
 
@@ -62,6 +71,7 @@ public class Util {
     	        if (!sb.toString().equals("()")) {
     	        	list.add(sb.toString());
     	        }
+    	        afterNewLine = false;
     	    }
     	}
     	

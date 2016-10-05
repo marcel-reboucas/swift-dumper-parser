@@ -36,6 +36,9 @@ public class AST extends ASTNode {
 	
 	@Override
 	public void prettyPrint(int ident) {
+		String identation = Util.getTabsForIdentationAmmount(ident);
+		String className = this.getClass().getSimpleName();
+		System.out.println(identation + className + ": " + nodeInfo);
 		for (ASTNode child : children) { child.prettyPrint(ident); }
 	}
 }

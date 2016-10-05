@@ -39,20 +39,28 @@ public class Main {
             File file = new File(projectPath);
             
             try {
-            	
+                
             	FileInputStream input = new FileInputStream(file);
                 String inputString = Util.getStringFromInputStream(input);
                 
                 DumperParser parser = new DumperParser(inputString);
                 AST dumperAST = parser.generateAST();
-                //dumperAST.prettyPrint(0);
+                dumperAST.prettyPrint(0);
                 
                 dumperAST.fillMetricContainer();
                 System.out.println(dumperAST.metricContainer.toString());
                 
                 for(ASTNode child : dumperAST.getChildren()){
-                	System.out.println(child.getChildren());
+                    System.out.println(child.getChildren());
                 }
+                
+                /* analyzing what nodes aren't implemented yet 
+                List<ASTNode> nodes = (List<ASTNode>) dumperAST.getSubnodesOfType(UnknownNode.class);
+                
+                for (ASTNode node : nodes){
+                	System.out.println(node.getNodeInfo());
+                }
+                */
                 
             } catch (IOException e) {
                 System.err.println("Could not read " + file.getAbsolutePath());

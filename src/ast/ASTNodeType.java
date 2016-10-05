@@ -2,6 +2,7 @@ package ast;
 
 import modifiednodes.CatchNode;
 import modifiednodes.ClassDeclNode;
+import modifiednodes.ClosureExprNode;
 import modifiednodes.ConditionalCheckedCastExprNode;
 import modifiednodes.DoCatchStmtNode;
 import modifiednodes.ForceTryExprNode;
