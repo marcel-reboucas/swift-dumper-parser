@@ -82,4 +82,24 @@ public abstract class ASTNode {
 
 	public abstract void prettyPrint(int ident);
 
+        
+	public List<? extends ASTNode> getSubnodesOfType(Class<? extends ASTNode> chosenClass){
+
+		ArrayList<ASTNode> list = new ArrayList<ASTNode>();
+
+		for (ASTNode node : this.children){
+
+			list.addAll(node.getSubnodesOfType(chosenClass));
+
+			if (node.getClass().equals(chosenClass)){
+				list.add(node);
+			}
+		}
+
+		return list;
+	}
+
+	public String getNodeInfo(){
+		return nodeInfo;
+	}
 }
