@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import ast.ASTNode;
+import metrics.MetricType;
 import util.Util;
 
 public class ForcedCheckedCastExprNode extends ASTNode {
@@ -33,6 +34,12 @@ public class ForcedCheckedCastExprNode extends ASTNode {
 		if (matcher.find()){
 			this.type = matcher.group(1);
 		}
+	}
+	
+	public void fillMetricContainer() {
+		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_FORCED_TYPE_CASTING, 1);
+		super.fillMetricContainer();
 	}
 
 }

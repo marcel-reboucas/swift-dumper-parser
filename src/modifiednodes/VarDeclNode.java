@@ -4,6 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import ast.ASTNode;
+import metrics.MetricType;
 import util.Util;
 
 public class VarDeclNode extends ASTNode {
@@ -48,4 +49,28 @@ public class VarDeclNode extends ASTNode {
 		}
 	}
 
+	public void fillMetricContainer() {
+		
+		if (this.isLet) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_LETS, 1);
+			
+			if (this.type.endsWith("?")) {
+				this.metricContainer.setMetric(MetricType.NUMBER_OF_LETS_WITH_OPTIONAL_TYPE, 1);
+			}
+			
+		} else {
+			
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_VARS, 1);
+			
+			if (this.type == null) {
+				System.out.println(this.name);
+				System.out.println(this.nodeInfo);
+			}
+			if (this.type.endsWith("?")) {
+				this.metricContainer.setMetric(MetricType.NUMBER_OF_VARS_WITH_OPTIONAL_TYPE, 1);
+			}
+		}
+		
+		super.fillMetricContainer();
+	}
 }

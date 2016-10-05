@@ -1,6 +1,7 @@
 package modifiednodes;
 
 import ast.ASTNode;
+import metrics.MetricType;
 import util.Util;
 
 public class OptionalTryExprNode extends ASTNode {
@@ -18,4 +19,9 @@ public class OptionalTryExprNode extends ASTNode {
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
 	}
 
+	public void fillMetricContainer() {
+		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_OPTIONAL_TRY, 1);
+		super.fillMetricContainer();
+	}
 }

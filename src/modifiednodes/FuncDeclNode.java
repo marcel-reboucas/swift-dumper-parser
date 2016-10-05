@@ -13,9 +13,9 @@ public class FuncDeclNode extends ASTNode {
 	
 	//'anonname=0x7faed893a090'
 	
-	String name; 
-	String type;
-	boolean anonymous;
+	public String name; 
+	public String type;
+	public boolean anonymous;
 	public int numberOfParameters;
 	public List<String> parameterTypes;
 	
@@ -80,5 +80,10 @@ public class FuncDeclNode extends ASTNode {
 			}
 		}
 		
+	}
+	
+public void fillMetricContainer() {
+		
+		super.fillMetricContainer();
 	}
 }

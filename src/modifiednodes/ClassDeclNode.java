@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import ast.ASTNode;
 import ast.ASTNodeType;
+import metrics.MetricType;
 import util.Util;
 
 public class ClassDeclNode extends ASTNode {
@@ -66,4 +67,12 @@ public class ClassDeclNode extends ASTNode {
 		this.numberOfAttributes = this.containsChildrenOfType(ASTNodeType.VarDecl, false).size();
 	}
 
+	public void fillMetricContainer() {
+		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_INSTANCE_VARIABLES, this.numberOfAttributes);
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_CONSTRUCTORS, this.numberOfConstructors);
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_METHODS, this.numberOfFunctions);
+		
+		super.fillMetricContainer();
+	}
 }

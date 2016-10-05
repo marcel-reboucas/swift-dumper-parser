@@ -98,6 +98,6 @@ public class Util {
     }
     
     public static Pattern getRegexPatternForType() {
-    	return Pattern.compile("(?<=type=\')(.*?)(?=\')");
+    	return Pattern.compile("(?<=type=['’])(.*?)(?=['’])");
     }
 }

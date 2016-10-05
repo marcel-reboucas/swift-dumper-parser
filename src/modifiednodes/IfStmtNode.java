@@ -48,7 +48,6 @@ public class IfStmtNode extends ASTNode {
 		}
 	}
 	
-	@Override
 	public void fillMetricContainer() {
 		
 		this.metricContainer.setMetric(MetricType.NUMBER_OF_IFS, 1);
@@ -57,9 +56,6 @@ public class IfStmtNode extends ASTNode {
 			this.metricContainer.setMetric(MetricType.NUMBER_OF_IF_LETS, 1);
 		}
 		
-		for (ASTNode child : children) {
-    		child.fillMetricContainer();
-    		this.metricContainer.mergeWith(child.metricContainer);
-    	}
+		super.fillMetricContainer();
 	}
 }

@@ -5,6 +5,7 @@ import java.util.List;
 
 import ast.ASTNode;
 import ast.ASTNodeType;
+import metrics.MetricType;
 import util.Util;
 
 public class GuardStmtNode extends ASTNode {
@@ -45,5 +46,16 @@ public class GuardStmtNode extends ASTNode {
 				guardLetTypes.add(((OptionalSomeElementNode) optionalSomeNode).type);
 			}
 		}
+	}
+	
+	public void fillMetricContainer() {
+		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_GUARDS, 1);
+		
+		if (this.isGuardLet) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_GUARD_LETS, 1);
+		}
+		
+		super.fillMetricContainer();
 	}
 }

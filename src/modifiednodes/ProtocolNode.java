@@ -2,16 +2,19 @@ package modifiednodes;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 import ast.ASTNode;
+import ast.ASTNodeType;
 import metrics.MetricType;
 import util.Util;
 
-public class ConditionalCheckedCastExprNode extends ASTNode {
+public class ProtocolNode extends ASTNode {
+
+	public String name;
+	public int numberOfMethods;
 	
-	String type;
-	
-	public ConditionalCheckedCastExprNode(String contents) {
+	public ProtocolNode(String contents) {
 		super(contents);
 	}
 
@@ -23,24 +26,24 @@ public class ConditionalCheckedCastExprNode extends ASTNode {
 		System.out.println(identation + className + ": " + nodeInfo);
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
 	}
-	
+
+
 	public void parseString(String str) {
 
 		super.parseString(str);
 		
-		Pattern pattern = Util.getRegexPatternForType();
+		Pattern pattern = Util.getRegexPatternBetweenQuotationMarks();
 		Matcher matcher = pattern.matcher(nodeInfo);
 				
 		if (matcher.find()){
-			this.type = matcher.group(1);
+			this.name = matcher.group(1);
 		}
-	}
-	
-public void fillMetricContainer() {
-		
-		this.metricContainer.setMetric(MetricType.NUMBER_OF_OPTIONAL_TYPE_CASTING, 1);
-		
-		super.fillMetricContainer();
+		this.numberOfMethods = this.containsChildrenOfType(ASTNodeType.FuncDecl, false).stream().
+				filter(u -> !((FuncDeclNode)u).anonymous).collect(Collectors.toList()).size();
 	}
 
+	public void fillMetricContainer() {
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_METHODS, this.numberOfMethods);
+		super.fillMetricContainer();
+	}
 }
