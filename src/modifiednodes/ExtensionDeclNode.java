@@ -31,6 +31,8 @@ public class ExtensionDeclNode extends ASTNode {
 		super.parseString(str);
 		
 		//if the nodeInfo contains more information besides the name
+		nodeInfo = nodeInfo.replaceAll(ASTNodeType.PxtensionDecl.identifier, "").trim();
+		
 		if (nodeInfo.trim().indexOf(" ") != -1) {
 			this.className = nodeInfo.trim().substring(0, nodeInfo.trim().indexOf(" ")).trim();
 		} else {
