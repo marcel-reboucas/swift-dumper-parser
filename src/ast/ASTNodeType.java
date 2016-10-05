@@ -204,7 +204,7 @@ public enum ASTNodeType {
 	public static ASTNodeType typeFromIdentifier(String id) {
 		
 		for (ASTNodeType type : ASTNodeType.values()) {
-			if (type.identifier.equals(id)) {
+			if (type.identifier.equals(id.trim())) {
 				return type;
 			}
 		}
