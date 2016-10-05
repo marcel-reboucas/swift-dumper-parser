@@ -194,8 +194,9 @@ public enum ASTNodeType {
     ;
 	
 	public String identifier;
+	@SuppressWarnings("rawtypes")
 	public Class clazz;
-	ASTNodeType(String identifier, Class clazz) {
+	ASTNodeType(String identifier, @SuppressWarnings("rawtypes") Class clazz) {
 		this.identifier = identifier;
 		this.clazz = clazz;
 	}

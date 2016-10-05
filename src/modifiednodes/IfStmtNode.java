@@ -5,6 +5,7 @@ import java.util.List;
 
 import ast.ASTNode;
 import ast.ASTNodeType;
+import metrics.MetricType;
 import util.Util;
 
 public class IfStmtNode extends ASTNode {
@@ -45,5 +46,20 @@ public class IfStmtNode extends ASTNode {
 				ifLetTypes.add(((OptionalSomeElementNode) optionalSomeNode).type);
 			}
 		}
+	}
+	
+	@Override
+	public void fillMetricContainer() {
+		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_IFS, 1);
+		
+		if (this.isIfLet) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_IF_LETS, 1);
+		}
+		
+		for (ASTNode child : children) {
+    		child.fillMetricContainer();
+    		this.metricContainer.mergeWith(child.metricContainer);
+    	}
 	}
 }

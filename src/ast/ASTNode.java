@@ -3,6 +3,7 @@ package ast;
 import java.util.ArrayList;
 import java.util.List;
 
+import metrics.MetricContainer;
 import util.Util;
 
 public abstract class ASTNode {
@@ -11,14 +12,20 @@ public abstract class ASTNode {
 	protected List<ASTNode> children;
 
 	public boolean isImplicit;
+	public MetricContainer metricContainer;
 	
 	public ASTNode(String contents) {
 		this.nodeInfo = "";
 		this.isImplicit = false;
 		this.children = new ArrayList<ASTNode>();
+		this.metricContainer = new MetricContainer();
 		parseString(contents);
 	}
 
+	public List<ASTNode> getChildren() {
+		return this.children;
+	}
+	
 	public void parseString(String str) {
 
 		// Remove opening and last parentheses
@@ -82,4 +89,11 @@ public abstract class ASTNode {
 
 	public abstract void prettyPrint(int ident);
 
+	public void fillMetricContainer() {
+		
+		for (ASTNode child : children) {
+    		child.fillMetricContainer();
+    		this.metricContainer.mergeWith(child.metricContainer);
+    	}
+	}
 }

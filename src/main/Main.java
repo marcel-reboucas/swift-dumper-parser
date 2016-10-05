@@ -1,10 +1,11 @@
-package analysis;
+package main;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
 import ast.AST;
+import ast.ASTNode;
 import util.Util;
 
 /**
@@ -44,7 +45,14 @@ public class Main {
                 
                 DumperParser parser = new DumperParser(inputString);
                 AST dumperAST = parser.generateAST();
-                dumperAST.prettyPrint(0);
+                //dumperAST.prettyPrint(0);
+                
+                dumperAST.fillMetricContainer();
+                System.out.println(dumperAST.metricContainer.toString());
+                
+                for(ASTNode child : dumperAST.getChildren()){
+                	System.out.println(child.getChildren());
+                }
                 
             } catch (IOException e) {
                 System.err.println("Could not read " + file.getAbsolutePath());
