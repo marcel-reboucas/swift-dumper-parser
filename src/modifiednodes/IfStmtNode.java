@@ -12,6 +12,7 @@ public class IfStmtNode extends ASTNode {
 	
 	boolean isIfLet;
     List<String> ifLetTypes;
+    int ifNil;
 	
 	public IfStmtNode(String contents) {
 		super(contents);
@@ -46,6 +47,20 @@ public class IfStmtNode extends ASTNode {
 				ifLetTypes.add(((OptionalSomeElementNode) optionalSomeNode).type);
 			}
 		}
+		
+		ifNil = 0;
+		
+		//checks if if contains nil comparison
+		List<ASTNode> callExprNodes = this.containsChildrenOfType(ASTNodeType.CallExpr, true);
+		for (ASTNode node : callExprNodes) {
+			List<ASTNode> tupleNodes = node.containsChildrenOfTypeRecursive(ASTNodeType.TupleExpr);
+			
+			for (ASTNode tuple : tupleNodes) {
+				if(((TupleExprNode) tuple).isNilComparison){
+					ifNil ++;
+				}
+			}
+		}
 	}
 	
 	public void fillMetricContainer() {
@@ -54,6 +69,10 @@ public class IfStmtNode extends ASTNode {
 		
 		if (this.isIfLet) {
 			this.metricContainer.setMetric(MetricType.NUMBER_OF_IF_LETS, 1);
+		}
+		
+		if (this.ifNil > 0) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_IF_NIL, this.ifNil);
 		}
 		
 		super.fillMetricContainer();

@@ -24,13 +24,9 @@ public class MetricContainer {
 
 			if (!type.nodeSpecific) {
 				if (this.metrics.containsKey(type)){
-
-
 					Object currentValue = this.metrics.get(type);
 					Object otherValue = other.getMetrics().get(type);
 					this.metrics.put(type, mergeValues(type, currentValue, otherValue));
-
-
 				} else {
 					this.metrics.put(type, other.getMetrics().get(type));
 				}

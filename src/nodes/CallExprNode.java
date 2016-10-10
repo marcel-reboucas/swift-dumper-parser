@@ -3,9 +3,9 @@ package nodes;
 import ast.ASTNode;
 import util.Util;
 
-public class TupleExprNode extends ASTNode {
+public class CallExprNode extends ASTNode {
 	
-	public TupleExprNode(String contents) {
+	public CallExprNode(String contents) {
 		super(contents);
 	}
 

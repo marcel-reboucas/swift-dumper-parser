@@ -21,6 +21,7 @@ import modifiednodes.ParameterNode;
 import modifiednodes.PatternLetNode;
 import modifiednodes.ProtocolNode;
 import modifiednodes.TryExprNode;
+import modifiednodes.TupleExprNode;
 import modifiednodes.VarDeclNode;
 import nodes.*;
 
@@ -36,6 +37,7 @@ public enum ASTNodeType {
     EnumElementDecl("enum_element_decl", EnumElementDeclNode.class),
     Component("component", ComponentNode.class),
     TypeIdent("type_ident", TypeIdentNode.class),
+    CallExpr("call_expr", CallExprNode.class),
     Result("result", ResultNode.class),
     Pattern("pattern", PatternNode.class),
     PatternParen("pattern_paren", PatternParenNode.class),

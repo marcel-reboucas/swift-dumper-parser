@@ -12,6 +12,7 @@ public class GuardStmtNode extends ASTNode {
 	
 	boolean isGuardLet;
     List<String> guardLetTypes;
+    int guardNil;
     
 	public GuardStmtNode(String contents) {
 		super(contents);
@@ -46,6 +47,20 @@ public class GuardStmtNode extends ASTNode {
 				guardLetTypes.add(((OptionalSomeElementNode) optionalSomeNode).type);
 			}
 		}
+		
+		guardNil = 0;
+		
+		//checks if if contains nil comparison
+		List<ASTNode> callExprNodes = this.containsChildrenOfType(ASTNodeType.CallExpr, true);
+		for (ASTNode node : callExprNodes) {
+			List<ASTNode> tupleNodes = node.containsChildrenOfTypeRecursive(ASTNodeType.TupleExpr);
+			
+			for (ASTNode tuple : tupleNodes) {
+				if(((TupleExprNode) tuple).isNilComparison){
+					guardNil ++;
+				}
+			}
+		}
 	}
 	
 	public void fillMetricContainer() {
@@ -54,6 +69,10 @@ public class GuardStmtNode extends ASTNode {
 		
 		if (this.isGuardLet) {
 			this.metricContainer.setMetric(MetricType.NUMBER_OF_GUARD_LETS, 1);
+		}
+		
+		if (this.guardNil > 0) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_IF_NIL, this.guardNil);
 		}
 		
 		super.fillMetricContainer();
