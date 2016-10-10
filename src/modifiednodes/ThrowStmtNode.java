@@ -1,6 +1,7 @@
-package nodes;
+package modifiednodes;
 
 import ast.ASTNode;
+import metrics.MetricType;
 import util.Util;
 
 public class ThrowStmtNode extends ASTNode {
@@ -18,4 +19,13 @@ public class ThrowStmtNode extends ASTNode {
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
 	}
 
+	
+	
+	@Override
+	public void fillMetricContainer() {
+		
+		this.metricContainer.setMetric(MetricType.NUMBER_OF_THROWS, 1);
+		super.fillMetricContainer();
+	}
+	
 }

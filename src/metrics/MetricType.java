@@ -23,7 +23,8 @@ public enum MetricType {
 	NUMBER_OF_VARS(Integer.class, false),
 	NUMBER_OF_VARS_WITH_OPTIONAL_TYPE(Integer.class, false),
 	NUMBER_OF_LETS(Integer.class, false),
-	NUMBER_OF_LETS_WITH_OPTIONAL_TYPE(Integer.class, false);
+	NUMBER_OF_LETS_WITH_OPTIONAL_TYPE(Integer.class, false),
+	NUMBER_OF_THROWS(Integer.class, false);
 	
 	@SuppressWarnings("rawtypes")
 	public Class typeClass;
