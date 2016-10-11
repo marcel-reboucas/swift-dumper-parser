@@ -49,15 +49,15 @@ public class Util {
 
     	// `afterNewLine` serves to avoid creating new nodes when parentheses appear
     	// on the same line, e.g. in types.
-    	boolean afterNewLine = false;
+    	//boolean afterNewLine = false;
     	
     	for (int i = 0; i < strLen; i++) {
     	    char c = str.charAt(i);
 
-    	    if (c == '\n'){
-    	    	afterNewLine = true;
-    	    }
-    	    if (afterNewLine && c == '(') {
+//    	    if (c == '\n'){
+//    	    	afterNewLine = true;
+//    	    }
+    	    if (c == '(') {
     	        int b = 1;
     	        StringBuilder sb = new StringBuilder("(");
 
@@ -70,8 +70,9 @@ public class Util {
     	        
     	        if (!sb.toString().equals("()")) {
     	        	list.add(sb.toString());
+    	        	//System.out.println(sb.toString());
     	        }
-    	        afterNewLine = false;
+    	        
     	    }
     	}
     	

@@ -47,11 +47,18 @@ public class FuncDeclNode extends ASTNode {
 			this.isImplicit = nodeInfo.contains(" implicit ");
 		}
 		
+		//look for the name between the bginning and the type
 		Pattern pattern = Util.getRegexPatternBetweenQuotationMarks();
-		Matcher matcher = pattern.matcher(nodeInfo);
+		Matcher matcher = pattern.matcher(nodeInfo.substring(0,nodeInfo.indexOf("type")));
 				
 		if (matcher.find()){
 			this.name = matcher.group(1);
+		} else {
+			 pattern = Util.getRegexPatternBetweenSingleQuotationMarks();
+			 matcher = pattern.matcher(nodeInfo.substring(0,nodeInfo.indexOf("type")));
+			 if (matcher.find()){
+				 this.name = matcher.group(1);
+			 }
 		}
 		
 		pattern = Util.getRegexPatternForType();

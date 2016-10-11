@@ -35,7 +35,10 @@ public abstract class ASTNode {
 
 		// remove child information
 		for (String childNodeString : childNodeStrings) {
-			nodeContent = nodeContent.replace(childNodeString, "");
+			
+			if (ASTNodeType.isNodeString(childNodeString)) {
+				nodeContent = nodeContent.replace(childNodeString, "");
+			}
 		}
 
 		this.nodeInfo = nodeContent;

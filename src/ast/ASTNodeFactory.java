@@ -2,8 +2,6 @@ package ast;
 
 import java.lang.reflect.InvocationTargetException;
 
-import nodes.UnknownNode;
-
 public class ASTNodeFactory {
 
 	@SuppressWarnings("unchecked")
@@ -27,9 +25,7 @@ public class ASTNodeFactory {
 				e.printStackTrace();
 			}
 		}
-		else{
-			result = new UnknownNode(nodeString);
-		}
+		
 		return result;
 	}
 

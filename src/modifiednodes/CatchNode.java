@@ -51,7 +51,7 @@ public class CatchNode extends ASTNode {
 		// '} catch _ {'
 		List<ASTNode> patternAnys = this.containsChildrenOfType(ASTNodeType.PatternAny, true);
 		if (!patternAnys.isEmpty()) { isGeneric = true; } 
-		
+
 		//'} catch _ as NSError{'
 		List<ASTNode> patternIs = this.containsChildrenOfType(ASTNodeType.PatternIs, true);
 		for (ASTNode patternIsNode : patternIs) {
@@ -70,12 +70,21 @@ public class CatchNode extends ASTNode {
 
 				if (!patternIs.isEmpty()){
 					this.checksType = true;
-					
+
 					PatternIsNode node = (PatternIsNode) patternIs.get(0);
 					this.checkedType = node.castedType;
 				}
 			}
 
+			//checking if is by value
+			patternIs = this.containsChildrenOfType(ASTNodeType.PatternIs, true);
+			for (ASTNode patternIsNode : patternIs) {
+				if (!patternIsNode.getChildren().isEmpty()) {
+					this.checksValue = true;
+					PatternIsNode node = (PatternIsNode) patternIs.get(0);
+					this.checkedValue = node.castedType;
+				}
+			}
 		}
 
 		// has empty block if brace_stmt does not contain any children
@@ -91,7 +100,7 @@ public class CatchNode extends ASTNode {
 
 		this.metricContainer.setMetric(MetricType.NUMBER_OF_CATCHES, 1);
 
-		
+
 		if (hasEmptyBlock) {
 			this.metricContainer.setMetric(MetricType.NUMBER_OF_EMPTY_CATCHES, 1);
 		}
@@ -99,9 +108,13 @@ public class CatchNode extends ASTNode {
 		if (isGeneric) {
 			this.metricContainer.setMetric(MetricType.NUMBER_OF_GENERIC_CATCHES, 1);
 		}
-		
+
 		if (checksType) {
 			this.metricContainer.setMetric(MetricType.NUMBER_OF_CATCHES_BY_TYPE, 1);
+		}
+
+		if (checksValue) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_CATCHES_BY_VALUE, 1);
 		}
 		
 		super.fillMetricContainer();

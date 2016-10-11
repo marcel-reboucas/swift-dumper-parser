@@ -35,7 +35,12 @@ public class TupleExprNode extends ASTNode {
 			this.type = matcher.group(1);
 		}
 		
-		this.isNilComparison = type.equals("(nilLiteral: ())");
+		if (this.type != null) {
+			this.isNilComparison = type.equals("(nilLiteral: ())");
+		} else {
+			this.isNilComparison = false;
+		}
+		
 	}
 
 }

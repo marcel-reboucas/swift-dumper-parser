@@ -198,6 +198,9 @@ public enum ASTNodeType {
     Catch_("catch", CatchNode.class),
     ForcedCheckedCastExpr("forced_checked_cast_expr", ForcedCheckedCastExprNode.class),
     ConditionalCheckedCastExpr("conditional_checked_cast_expr", ConditionalCheckedCastExprNode.class),
+    ConstructorRefCallExpr("constructor_ref_call_expr", ConstructorRefCallExprNode.class),
+    AssignExpr("assign_expr", AssignExprNode.class),
+    DotSyntaxCallExpr("dot_syntax_call_expr",DotSyntaxCallExprNode.class),
     ;
 	
 	public String identifier;
@@ -218,5 +221,20 @@ public enum ASTNodeType {
 		
 		//System.out.println("Not found!!! "+ id);
 		return ASTNodeType.Unknown;
+	}
+	
+	public static boolean isNodeString(String str) {
+		
+		if (str.length() == 0) {
+			return false;
+		}
+		
+		for (ASTNodeType type : ASTNodeType.values()) {
+			if (str.startsWith(type.identifier)) {
+				return true;
+			}
+		}
+	
+		return false;
 	}
 }
