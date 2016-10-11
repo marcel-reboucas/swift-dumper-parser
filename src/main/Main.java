@@ -12,6 +12,7 @@ import modifiednodes.ClassDeclNode;
 import modifiednodes.ExtensionDeclNode;
 import modifiednodes.FuncDeclNode;
 import modifiednodes.ProtocolNode;
+import modifiednodes.StructDeclNode;
 import util.Util;
 
 /**
@@ -95,6 +96,22 @@ public class Main {
 			}
 			ident -= 1;
 		}
+		
+		// for each class declaration:
+				for (ASTNode child : node.containsChildrenOfTypeRecursive(ASTNodeType.StructDecl)) {
+					String identation = Util.getTabsForIdentationAmmount(ident);
+					System.out.println(identation + "Struct: "+ ((StructDeclNode) child).name + " " + child.metricContainer );
+
+					ident += 1;
+					identation = Util.getTabsForIdentationAmmount(ident);
+					for (ASTNode childFunc : child.containsChildrenOfType(ASTNodeType.FuncDecl, false).stream().
+							filter(u -> !((FuncDeclNode)u).anonymous).collect(Collectors.toList())) {
+						identation = Util.getTabsForIdentationAmmount(ident);
+						System.out.println(identation + "Func: "+ ((FuncDeclNode) childFunc).name + " " + childFunc.metricContainer );
+
+					}
+					ident -= 1;
+				}
 
 		// for each extension declaration:
 		for (ASTNode child : node.containsChildrenOfTypeRecursive(ASTNodeType.PxtensionDecl)) {

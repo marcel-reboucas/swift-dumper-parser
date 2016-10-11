@@ -20,6 +20,7 @@ import modifiednodes.ParameterListNode;
 import modifiednodes.ParameterNode;
 import modifiednodes.PatternLetNode;
 import modifiednodes.ProtocolNode;
+import modifiednodes.StructDeclNode;
 import modifiednodes.ThrowStmtNode;
 import modifiednodes.TryExprNode;
 import modifiednodes.TupleExprNode;
