@@ -8,7 +8,7 @@ import util.Util;
 
 public abstract class ASTNode {
 
-	protected String nodeInfo;
+	public String nodeInfo;
 	protected List<ASTNode> children;
 
 	public boolean isImplicit;
