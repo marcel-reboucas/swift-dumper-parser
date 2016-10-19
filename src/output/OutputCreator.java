@@ -125,6 +125,7 @@ public class OutputCreator {
 			method.put(nodeType, "method");
 			method.put(name,node.name);
 			method.put("return_type", node.returnType);
+			method.put("returns_optional_type", node.returnsOptionalType);
 			method.put("parameter_types", node.parameterTypes);
 			method.putAll(childFunc.metricContainer.toStringHashMap());
 			methods.add(method);
