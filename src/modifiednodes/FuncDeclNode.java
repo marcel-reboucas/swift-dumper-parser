@@ -15,7 +15,8 @@ public class FuncDeclNode extends ASTNode {
 	//'anonname=0x7faed893a090'
 	
 	public String name; 
-	public String type;
+	public String returnType;
+	public boolean returnsOptionalType;
 	public boolean anonymous;
 	public int numberOfParameters;
 	public List<String> parameterTypes;
@@ -31,7 +32,7 @@ public class FuncDeclNode extends ASTNode {
 		String className = this.getClass().getSimpleName();
 		System.out.println(identation + className + ": " + 
 		" name: "+name +
-		" type: "+type + 
+		" returnType: "+returnType + 
 		" numberOfParameters: "+numberOfParameters +
 		" parameterTypes: "+parameterTypes);
 		for (ASTNode child : children) { child.prettyPrint(ident + 1); }
@@ -65,7 +66,9 @@ public class FuncDeclNode extends ASTNode {
 		matcher = pattern.matcher(nodeInfo);
 				
 		if (matcher.find()){
-			this.type = matcher.group(1);
+			this.returnType = matcher.group(1);
+			this.returnType = this.returnType.substring(returnType.lastIndexOf(" ")).trim();
+			this.returnsOptionalType = this.returnType.endsWith("?");
 		}
 		
 		if (this.name != null) {

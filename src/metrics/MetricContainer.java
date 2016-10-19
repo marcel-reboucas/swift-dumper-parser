@@ -45,4 +45,15 @@ public class MetricContainer {
 	public String toString(){
 		return metrics.toString();
 	}
+	
+	public HashMap<String, Object> toStringHashMap() {
+		
+		HashMap<String, Object> stringMap = new HashMap<>();
+		
+		for (MetricType type : metrics.keySet()){
+			stringMap.put(type.name().toLowerCase(), metrics.get(type));
+		}
+		
+		return stringMap;
+	}
 }

@@ -39,7 +39,7 @@ public enum MetricType {
 	}
 	
 	public String toString(){
-		return this.name();
+		return this.name().toLowerCase();
 	}
 	
 }

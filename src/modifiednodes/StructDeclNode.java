@@ -55,7 +55,8 @@ public class StructDeclNode extends ASTNode {
 		}
 		
 		if (nodeInfo.lastIndexOf("inherits: ") != -1) {
-			this.inherits = nodeInfo.substring(nodeInfo.lastIndexOf("inherits: ") + 9).trim();
+			int startIndex = nodeInfo.lastIndexOf("inherits: ") + 9;
+			this.inherits = nodeInfo.substring(startIndex).substring(0,str.indexOf(' ')).trim();
 		}
 		
 		
