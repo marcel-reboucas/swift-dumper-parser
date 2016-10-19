@@ -80,7 +80,7 @@ public class Main {
 		System.out.println("Total: " + node.metricContainer.toString());
 
 		int ident = 0;
-
+		
 		// for each class declaration:
 		for (ASTNode child : node.containsChildrenOfTypeRecursive(ASTNodeType.ClassDecl)) {
 			String identation = Util.getTabsForIdentationAmmount(ident);
