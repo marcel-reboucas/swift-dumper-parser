@@ -24,6 +24,8 @@ public class ASTNodeFactory {
 					| InvocationTargetException | NoSuchMethodException | SecurityException e) {
 				e.printStackTrace();
 			}
+		} else {
+			//System.out.println("Unknown Type: " + identifier);
 		}
 		
 		return result;

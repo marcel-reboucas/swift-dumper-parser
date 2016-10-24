@@ -1,0 +1,58 @@
+(source_file "/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift"
+  (import_decl 'Foundation')
+  (class_decl "classe" type='classe.Type' access=internal @_fixed_layout
+    (constructor_decl "init()" type='classe.Type -> () -> classe' access=internal designated
+      (parameter_list
+        (parameter "self" type='classe'))
+      (parameter_list)
+      (brace_stmt
+        (call_expr type='()' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:9 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:9 - line:14:30] nothrow
+          (declref_expr type='(Any..., separator: String, terminator: String) -> ()' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:9 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:9 - line:14:9] decl=Swift.(file).print(_:separator:terminator:) specialized=no)
+          (tuple_shuffle_expr implicit type='(Any..., separator: String, terminator: String)' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:14 - line:14:30] sourceIsScalar elements=[-2, -1, -1] variadic_sources=[0]
+            (paren_expr type='Any' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:14 - line:14:30]
+              (erasure_expr implicit type='Any' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 - line:14:15]
+                (call_expr implicit type='String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 - line:14:15] nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 - line:14:15] nothrow
+                    (declref_expr implicit type='String.Type -> (_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 - line:14:15] decl=Swift.(file).String.init(_builtinStringLiteral:byteSize:isASCII:) specialized=no)
+                    (type_expr implicit type='String.Type' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 - line:14:15] typerepr='String'))
+                  (string_literal_expr type='(_builtinStringLiteral: Builtin.RawPointer, byteSize: Builtin.Word, isASCII: Builtin.Int1)' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:14:15 - line:14:15] encoding=utf8 value="Hello, World!"))))))
+        (pattern_binding_decl
+          (pattern_typed type='String?'
+            (pattern_named type='String?' 'a')
+)
+          (call_expr implicit type='String?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 - line:16:27] nothrow
+            (constructor_ref_call_expr implicit type='(nilLiteral: ()) -> String?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 - line:16:27] nothrow
+              (declref_expr implicit type='Optional<String>.Type -> (nilLiteral: ()) -> String?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 - line:16:27] decl=Swift.(file).Optional.init(nilLiteral:) [with String] specialized=no)
+              (type_expr implicit type='String?.Type' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 - line:16:27] typerepr='String?'))
+            (tuple_expr implicit type='(nilLiteral: ())' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 - line:16:27] names=nilLiteral
+              (tuple_expr type='()' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:27 - line:16:27]))))
+        (var_decl "a" type='String?' access=private let storage_kind=stored)
+        (pattern_binding_decl
+          (pattern_named type='String' 'nilCol')
+          (binary_expr type='String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:24 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:22 - line:18:27] nothrow
+            (declref_expr type='(String?, @autoclosure () throws -> String) throws -> String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:24 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:24 - line:18:24] decl=Swift.(file).?? [with String] specialized=no)
+            (tuple_expr implicit type='(String?, @autoclosure () throws -> String)' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:22 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:22 - line:18:27]
+              (declref_expr type='String?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:22 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:22 - line:18:22] decl=DumpTest.(file).classe.init.a@/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:13 specialized=no)
+              (autoclosure_expr implicit type='@autoclosure () throws -> String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 - line:18:27] discriminator=0
+
+                (parameter_list)
+                (call_expr implicit type='String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 - line:18:27] nothrow
+                  (constructor_ref_call_expr implicit type='(_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 - line:18:27] nothrow
+                    (declref_expr implicit type='String.Type -> (_builtinStringLiteral: RawPointer, byteSize: Word, isASCII: Int1) -> String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 - line:18:27] decl=Swift.(file).String.init(_builtinStringLiteral:byteSize:isASCII:) specialized=no)
+                    (type_expr implicit type='String.Type' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 - line:18:27] typerepr='String'))
+                  (string_literal_expr type='(_builtinStringLiteral: Builtin.RawPointer, byteSize: Builtin.Word, isASCII: Builtin.Int1)' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:18:27 - line:18:27] encoding=utf8 value=""))))))
+        (var_decl "nilCol" type='String' access=private storage_kind=stored)
+        (pattern_binding_decl
+          (pattern_named type='Distance?' 'characters')
+          (optional_evaluation_expr implicit type='Distance?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:40 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 - line:20:40]
+            (inject_into_optional implicit type='Distance?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:40 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 - line:20:40]
+              (member_ref_expr type='Distance' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:40 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 - line:20:40] decl=Swift.(file).CollectionType.count [with String.CharacterView[String.CharacterView: CollectionType module Swift], IndexingGenerator<String.CharacterView>[IndexingGenerator<String.CharacterView>: specialize <String.CharacterView, String.CharacterView.Index, Int, Int, _DisabledRangeIndex_, Character> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], Character, String.CharacterView.Index[String.CharacterView.Index: ForwardIndexType module Swift], Int[Int: _SignedIntegerType module Swift], Int[Int: _BuiltinIntegerLiteralConvertible module Swift], _DisabledRangeIndex_, String.CharacterView[String.CharacterView: Indexable module Swift, String.CharacterView: SequenceType module Swift], Generator[IndexingGenerator<String.CharacterView>: specialize <String.CharacterView, String.CharacterView.Index, Int, Int, _DisabledRangeIndex_, Character> (<Elements : Indexable> IndexingGenerator<Elements>: GeneratorType module Swift)], Character, String.CharacterView.Index[String.CharacterView.Index: ForwardIndexType module Swift], Int[Int: _SignedIntegerType module Swift], Int[Int: _BuiltinIntegerLiteralConvertible module Swift], _DisabledRangeIndex_, SubSequence, Character, Character]
+                (member_ref_expr type='String.CharacterView' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:29 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 - line:20:29] decl=Swift.(file).String.characters
+                  (bind_optional_expr type='String' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:27 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 - line:20:27] depth=0
+                    (declref_expr type='String?' location=/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 range=[/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:20:26 - line:20:26] decl=DumpTest.(file).classe.init.a@/Users/Marcel/Documents/Development/DumpTest/DumpTest/main.swift:16:13 specialized=no)))))))
+        (var_decl "characters" type='Distance?' access=private let storage_kind=stored)
+        (return_stmt)))
+    (destructor_decl implicit "deinit" type='classe -> ()' access=internal @objc
+      (parameter_list
+        (parameter "self" type='classe'))
+      (brace_stmt))))

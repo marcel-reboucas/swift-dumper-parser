@@ -4,12 +4,14 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import ast.ASTNode;
+import metrics.MetricType;
 import util.Util;
 
 public class TupleExprNode extends ASTNode {
 	
 	public String type;
-	public boolean isNilComparison;
+	public boolean isNilComparison; // nil comparison is added at IfStmtNode
+	public boolean isNilCoalescing;
 	
 	public TupleExprNode(String contents) {
 		super(contents);
@@ -41,6 +43,24 @@ public class TupleExprNode extends ASTNode {
 			this.isNilComparison = false;
 		}
 		
+		// (tuple_expr implicit type='(String?, @autoclosure () throws -> String?)'
+		// if it is implicit, containts a nil type and an autoclosure
+		if (this.isImplicit && 
+				this.type.contains("?,") && 
+				this.type.contains("@autoclosure () throws")) {
+			isNilCoalescing = true;
+		} else {
+			isNilCoalescing = false;
+		}
+	}
+	
+	public void fillMetricContainer() {
+		
+		// nil comparison is added at IfStmtNode. nil coalescing is added here. 
+		if (this.isNilCoalescing) {
+			this.metricContainer.setMetric(MetricType.NUMBER_OF_NIL_COALESCING, 1);
+		}
+		super.fillMetricContainer();
 	}
 
 }

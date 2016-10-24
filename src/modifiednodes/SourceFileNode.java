@@ -1,11 +1,9 @@
 package modifiednodes;
 
-import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import ast.ASTNode;
-import ast.ASTNodeType;
 import util.Util;
 
 public class SourceFileNode extends ASTNode {

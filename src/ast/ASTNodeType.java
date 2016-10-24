@@ -202,6 +202,8 @@ public enum ASTNodeType {
     ConstructorRefCallExpr("constructor_ref_call_expr", ConstructorRefCallExprNode.class),
     AssignExpr("assign_expr", AssignExprNode.class),
     DotSyntaxCallExpr("dot_syntax_call_expr",DotSyntaxCallExprNode.class),
+    BinaryExpr("binary_expr",BinaryExprNode.class),
+    AutoClosureExpr("autoclosure_expr", AutoClosureExprNode.class),
     ;
 	
 	public String identifier;
