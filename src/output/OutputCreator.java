@@ -14,6 +14,7 @@ import com.google.gson.GsonBuilder;
 import ast.ASTNode;
 import ast.ASTNodeType;
 import modifiednodes.ClassDeclNode;
+import modifiednodes.EnumDeclNode;
 import modifiednodes.ExtensionDeclNode;
 import modifiednodes.FuncDeclNode;
 import modifiednodes.ProtocolNode;
@@ -112,6 +113,22 @@ public class OutputCreator {
 			protocolList.add(protocolMap);
 		}
 		projectMap.put("protocols", protocolList);
+		
+		List<HashMap<String, Object>> enumsList = new ArrayList<>();
+		// for each extension declaration:
+		for (ASTNode extension : programAst.containsChildrenOfTypeRecursive(ASTNodeType.EnumDecl)) {
+			
+			EnumDeclNode node = (EnumDeclNode) extension;
+			
+			HashMap<String, Object> enumMap = new HashMap<>();
+			enumMap.put(nodeType, "extension");
+			enumMap.put(name, node.name);
+			enumMap.put(sourcePath, node.sourceFilePath);
+			enumMap.putAll(node.metricContainer.toStringHashMap());
+			enumMap.put("methods", getMethods(extension));
+			enumsList.add(enumMap);
+		}
+		projectMap.put("enums", enumsList);
 		
 		rootMap.put("project", projectMap);
 		

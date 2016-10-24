@@ -46,6 +46,7 @@ public class TupleExprNode extends ASTNode {
 		// (tuple_expr implicit type='(String?, @autoclosure () throws -> String?)'
 		// if it is implicit, containts a nil type and an autoclosure
 		if (this.isImplicit && 
+				this.type != null &&
 				this.type.contains("?,") && 
 				this.type.contains("@autoclosure () throws")) {
 			isNilCoalescing = true;

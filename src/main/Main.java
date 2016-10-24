@@ -9,6 +9,7 @@ import ast.AST;
 import ast.ASTNode;
 import ast.ASTNodeType;
 import modifiednodes.ClassDeclNode;
+import modifiednodes.EnumDeclNode;
 import modifiednodes.ExtensionDeclNode;
 import modifiednodes.FuncDeclNode;
 import modifiednodes.ProtocolNode;
@@ -135,6 +136,22 @@ public class Main {
 		for (ASTNode child : node.containsChildrenOfTypeRecursive(ASTNodeType.Protocol)) {
 			String identation = Util.getTabsForIdentationAmmount(ident);
 			System.out.println(identation + "Protocol: "+ ((ProtocolNode) child).name + " " + child.metricContainer );
+
+			ident += 1;
+			identation = Util.getTabsForIdentationAmmount(ident);
+			for (ASTNode childFunc : child.containsChildrenOfType(ASTNodeType.FuncDecl, false).stream().
+					filter(u -> !((FuncDeclNode)u).anonymous).collect(Collectors.toList())) {
+				identation = Util.getTabsForIdentationAmmount(ident);
+				System.out.println(identation + "Func: "+ ((FuncDeclNode) childFunc).name + " " + childFunc.metricContainer );
+
+			}
+			ident -= 1;
+		}
+
+		// for each protocol declaration:
+		for (ASTNode child : node.containsChildrenOfTypeRecursive(ASTNodeType.EnumDecl)) {
+			String identation = Util.getTabsForIdentationAmmount(ident);
+			System.out.println(identation + "Enum: "+ ((EnumDeclNode) child).name + " " + child.metricContainer );
 
 			ident += 1;
 			identation = Util.getTabsForIdentationAmmount(ident);

@@ -5,6 +5,7 @@ import modifiednodes.ClassDeclNode;
 import modifiednodes.ClosureExprNode;
 import modifiednodes.ConditionalCheckedCastExprNode;
 import modifiednodes.DoCatchStmtNode;
+import modifiednodes.EnumDeclNode;
 import modifiednodes.ExtensionDeclNode;
 import modifiednodes.ForceTryExprNode;
 import modifiednodes.ForceValueExprNode;
@@ -38,6 +39,7 @@ public enum ASTNodeType {
     Parameter("parameter", ParameterNode.class),
     EnumDecl("enum_decl", EnumDeclNode.class),
     EnumElementDecl("enum_element_decl", EnumElementDeclNode.class),
+    EnumCaseDecl("enum_case_decl", EnumCaseDeclNode.class),
     Component("component", ComponentNode.class),
     TypeIdent("type_ident", TypeIdentNode.class),
     CallExpr("call_expr", CallExprNode.class),
