@@ -9,9 +9,10 @@ import util.Util;
 public abstract class ASTNode {
 
 	public String nodeInfo;
-	protected List<ASTNode> children;
+	public List<ASTNode> children;
 
 	public boolean isImplicit;
+	public String sourceFilePath;
 	public MetricContainer metricContainer;
 	
 	public ASTNode(String contents) {
@@ -51,7 +52,7 @@ public abstract class ASTNode {
 
 		for (String childNodeString : childNodeStrings) {
 			ASTNode node = factory.createNode(childNodeString);
-
+			
 			if (node != null) {
 				children.add(node);
 			}

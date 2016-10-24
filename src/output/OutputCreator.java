@@ -24,6 +24,7 @@ public class OutputCreator {
 	final static String nodeType = "node_type";
 	final static String name = "name";
 	final static String type = "type";
+	final static String sourcePath = "source_path";
 	
 	
 	public ASTNode programAst;
@@ -71,6 +72,7 @@ public class OutputCreator {
 			structMap.put(nodeType, "struct");
 			structMap.put(name,node.name);
 			structMap.put(type, node.type);
+			structMap.put(sourcePath, node.sourceFilePath);
 			structMap.put("inherits", node.inherits);
 			structMap.putAll(struct.metricContainer.toStringHashMap());
 			structMap.put("methods", getMethods(struct));
@@ -83,9 +85,12 @@ public class OutputCreator {
 		// for each extension declaration:
 		for (ASTNode extension : programAst.containsChildrenOfTypeRecursive(ASTNodeType.PxtensionDecl)) {
 			
+			ExtensionDeclNode node = (ExtensionDeclNode) extension;
+			
 			HashMap<String, Object> extensionMap = new HashMap<>();
 			extensionMap.put(nodeType, "extension");
-			extensionMap.put(name, ((ExtensionDeclNode)extension).className);
+			extensionMap.put(name, node.className);
+			extensionMap.put(sourcePath, node.sourceFilePath);
 			extensionMap.putAll(extension.metricContainer.toStringHashMap());
 			extensionMap.put("methods", getMethods(extension));
 			extensionsList.add(extensionMap);
@@ -96,9 +101,12 @@ public class OutputCreator {
 		// for each protocol declaration:
 		for (ASTNode protocol : programAst.containsChildrenOfTypeRecursive(ASTNodeType.Protocol)) {
 			
+			ProtocolNode node = (ProtocolNode) protocol;
+			
 			HashMap<String, Object> protocolMap = new HashMap<>();
 			protocolMap.put(nodeType, "protocol");
-			protocolMap.put(name, ((ProtocolNode)protocol).name);
+			protocolMap.put(name,node.name);
+			protocolMap.put(sourcePath, node.sourceFilePath);
 			protocolMap.putAll(protocol.metricContainer.toStringHashMap());
 			protocolMap.put("methods", getMethods(protocol));
 			protocolList.add(protocolMap);

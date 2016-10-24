@@ -1,6 +1,6 @@
 {
   "project": {
-    "number_of_ifs": 241,
+    "number_of_ifs": 232,
     "number_of_lets_with_optional_type": 7,
     "structs": [
       {
@@ -11,13 +11,14 @@
         "number_of_constructors": 2,
         "methods": [],
         "name": "CVSet",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift",
         "number_of_vars": 3,
         "type": "CVSet.Type",
         "inherits": "NilLiteralC",
         "number_of_vars_with_optional_type": 1
       }
     ],
-    "number_of_methods": 218,
+    "number_of_methods": 210,
     "number_of_optional_type_casting": 7,
     "classes": [
       {
@@ -76,6 +77,34 @@
         "number_of_lets": 1,
         "number_of_vars": 1,
         "type": "CVCalendarTouchController.Type"
+      },
+      {
+        "number_of_ifs": 2,
+        "number_of_instance_variables": 11,
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "()",
+            "parameter_types": [
+              "(DayView) -\u003e Void"
+            ],
+            "node_type": "method",
+            "number_of_parameters": 1,
+            "name": "mapDayViews(_:)",
+            "number_of_forced_unwrappings": 4,
+            "returns_optional_type": false
+          }
+        ],
+        "number_of_vars": 11,
+        "type": "CVCalendarMonthView.Type",
+        "node_type": "class",
+        "number_of_if_lets": 1,
+        "number_of_constructors": 3,
+        "name": "CVCalendarMonthView",
+        "number_of_forced_unwrappings": 6,
+        "number_of_lets": 1,
+        "inherits": "UIView",
+        "number_of_vars_with_optional_type": 3
       },
       {
         "number_of_ifs": 18,
@@ -238,31 +267,41 @@
       },
       {
         "number_of_ifs": 2,
-        "number_of_instance_variables": 11,
-        "number_of_methods": 1,
+        "number_of_instance_variables": 6,
+        "number_of_methods": 2,
         "methods": [
           {
             "return_type": "()",
+            "parameter_types": [],
+            "node_type": "method",
+            "number_of_parameters": 0,
+            "name": "didMoveToSuperview()",
+            "returns_optional_type": false
+          },
+          {
+            "return_type": "()",
+            "number_of_ifs": 2,
             "parameter_types": [
-              "(DayView) -\u003e Void"
+              "CGRect"
             ],
             "node_type": "method",
+            "number_of_if_lets": 2,
             "number_of_parameters": 1,
-            "name": "mapDayViews(_:)",
-            "number_of_forced_unwrappings": 4,
-            "returns_optional_type": false
+            "name": "drawRect(_:)",
+            "number_of_forced_unwrappings": 3,
+            "returns_optional_type": false,
+            "number_of_vars": 1
           }
         ],
-        "number_of_vars": 11,
-        "type": "CVCalendarMonthView.Type",
+        "number_of_vars": 5,
+        "type": "CVAuxiliaryView.Type",
         "node_type": "class",
-        "number_of_if_lets": 1,
+        "number_of_if_lets": 2,
         "number_of_constructors": 3,
-        "name": "CVCalendarMonthView",
-        "number_of_forced_unwrappings": 6,
-        "number_of_lets": 1,
-        "inherits": "UIView",
-        "number_of_vars_with_optional_type": 3
+        "name": "CVAuxiliaryView",
+        "number_of_forced_unwrappings": 3,
+        "number_of_lets": 4,
+        "inherits": "UIView"
       },
       {
         "number_of_ifs": 8,
@@ -353,56 +392,6 @@
         "name": "CVCalendarManager",
         "number_of_forced_unwrappings": 11,
         "number_of_lets": 42,
-        "number_of_vars_with_optional_type": 1
-      },
-      {
-        "number_of_ifs": 2,
-        "number_of_instance_variables": 6,
-        "number_of_methods": 2,
-        "methods": [
-          {
-            "return_type": "()",
-            "parameter_types": [],
-            "node_type": "method",
-            "number_of_parameters": 0,
-            "name": "didMoveToSuperview()",
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "number_of_ifs": 2,
-            "parameter_types": [
-              "CGRect"
-            ],
-            "node_type": "method",
-            "number_of_if_lets": 2,
-            "number_of_parameters": 1,
-            "name": "drawRect(_:)",
-            "number_of_forced_unwrappings": 3,
-            "returns_optional_type": false,
-            "number_of_vars": 1
-          }
-        ],
-        "number_of_vars": 5,
-        "type": "CVAuxiliaryView.Type",
-        "node_type": "class",
-        "number_of_if_lets": 2,
-        "number_of_constructors": 3,
-        "name": "CVAuxiliaryView",
-        "number_of_forced_unwrappings": 3,
-        "number_of_lets": 4,
-        "inherits": "UIView"
-      },
-      {
-        "number_of_instance_variables": 4,
-        "node_type": "class",
-        "number_of_methods": 0,
-        "number_of_constructors": 1,
-        "methods": [],
-        "name": "CVCalendarDayViewControlCoordinator",
-        "number_of_lets": 1,
-        "number_of_vars": 3,
-        "type": "CVCalendarDayViewControlCoordinator.Type",
         "number_of_vars_with_optional_type": 1
       },
       {
@@ -604,41 +593,6 @@
         "type": "CVCalendarViewAnimator.Type"
       },
       {
-        "number_of_ifs": 13,
-        "number_of_lets_with_optional_type": 1,
-        "number_of_instance_variables": 13,
-        "number_of_methods": 1,
-        "methods": [
-          {
-            "return_type": "CVDate",
-            "number_of_ifs": 7,
-            "number_of_lets_with_optional_type": 1,
-            "parameter_types": [
-              "CVCalendarWeekView",
-              "Int"
-            ],
-            "node_type": "method",
-            "number_of_if_lets": 1,
-            "number_of_parameters": 2,
-            "name": "dateWithWeekView(_:andWeekIndex:)",
-            "number_of_forced_unwrappings": 16,
-            "returns_optional_type": false,
-            "number_of_lets": 6,
-            "number_of_vars": 2
-          }
-        ],
-        "number_of_vars": 16,
-        "type": "CVCalendarDayView.Type",
-        "node_type": "class",
-        "number_of_if_lets": 4,
-        "number_of_constructors": 3,
-        "name": "CVCalendarDayView",
-        "number_of_forced_unwrappings": 20,
-        "number_of_lets": 11,
-        "inherits": "UIView",
-        "number_of_vars_with_optional_type": 2
-      },
-      {
         "number_of_ifs": 1,
         "number_of_instance_variables": 5,
         "node_type": "class",
@@ -718,6 +672,41 @@
         "number_of_vars_with_optional_type": 8
       },
       {
+        "number_of_ifs": 13,
+        "number_of_lets_with_optional_type": 1,
+        "number_of_instance_variables": 13,
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "CVDate",
+            "number_of_ifs": 7,
+            "number_of_lets_with_optional_type": 1,
+            "parameter_types": [
+              "CVCalendarWeekView",
+              "Int"
+            ],
+            "node_type": "method",
+            "number_of_if_lets": 1,
+            "number_of_parameters": 2,
+            "name": "dateWithWeekView(_:andWeekIndex:)",
+            "number_of_forced_unwrappings": 16,
+            "returns_optional_type": false,
+            "number_of_lets": 6,
+            "number_of_vars": 2
+          }
+        ],
+        "number_of_vars": 16,
+        "type": "CVCalendarDayView.Type",
+        "node_type": "class",
+        "number_of_if_lets": 4,
+        "number_of_constructors": 3,
+        "name": "CVCalendarDayView",
+        "number_of_forced_unwrappings": 20,
+        "number_of_lets": 11,
+        "inherits": "UIView",
+        "number_of_vars_with_optional_type": 2
+      },
+      {
         "number_of_instance_variables": 13,
         "node_type": "class",
         "number_of_methods": 0,
@@ -730,7 +719,7 @@
         "inherits": "UIViewCont"
       }
     ],
-    "number_of_vars": 184,
+    "number_of_vars": 181,
     "number_of_forced_type_casting": 1,
     "number_of_guards": 1,
     "extensions": [
@@ -774,7 +763,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVSet\u003cT\u003e"
+        "name": "CVSet\u003cT\u003e",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift"
       },
       {
         "number_of_ifs": 1,
@@ -793,7 +783,8 @@
             "returns_optional_type": true
           }
         ],
-        "name": "CVSet\u003cT\u003e"
+        "name": "CVSet\u003cT\u003e",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift"
       },
       {
         "number_of_lets_with_optional_type": 1,
@@ -814,6 +805,7 @@
         ],
         "name": "CVSet\u003cT\u003e",
         "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVSet.swift",
         "number_of_vars": 1
       },
       {
@@ -839,6 +831,7 @@
         "name": "CVCalendarView",
         "number_of_forced_unwrappings": 4,
         "number_of_lets": 9,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift",
         "number_of_vars": 1
       },
       {
@@ -860,7 +853,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarView"
+        "name": "CVCalendarView",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift"
       },
       {
         "number_of_ifs": 1,
@@ -935,7 +929,8 @@
         ],
         "name": "CVCalendarView",
         "number_of_forced_unwrappings": 14,
-        "number_of_lets": 1
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift"
       },
       {
         "number_of_ifs": 1,
@@ -956,7 +951,8 @@
           }
         ],
         "name": "CVCalendarView",
-        "number_of_forced_unwrappings": 1
+        "number_of_forced_unwrappings": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift"
       },
       {
         "node_type": "extension",
@@ -975,7 +971,8 @@
           }
         ],
         "name": "UIColor",
-        "number_of_lets": 3
+        "number_of_lets": 3,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAppearance.swift"
       },
       {
         "number_of_ifs": 2,
@@ -1022,7 +1019,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarTouchController"
+        "name": "CVCalendarTouchController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarTouchController.swift"
       },
       {
         "number_of_ifs": 7,
@@ -1108,8 +1106,151 @@
         "name": "CVCalendarTouchController",
         "number_of_forced_unwrappings": 10,
         "number_of_lets": 5,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarTouchController.swift",
         "number_of_vars": 3,
         "number_of_vars_with_optional_type": 2
+      },
+      {
+        "node_type": "extension",
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "()",
+            "parameter_types": [],
+            "node_type": "method",
+            "number_of_parameters": 0,
+            "name": "commonInit()",
+            "number_of_forced_unwrappings": 7,
+            "returns_optional_type": false,
+            "number_of_lets": 1
+          }
+        ],
+        "name": "CVCalendarMonthView",
+        "number_of_forced_unwrappings": 7,
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthView.swift"
+      },
+      {
+        "number_of_ifs": 1,
+        "node_type": "extension",
+        "number_of_if_lets": 1,
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "()",
+            "number_of_ifs": 1,
+            "parameter_types": [
+              "CGRect"
+            ],
+            "node_type": "method",
+            "number_of_if_lets": 1,
+            "number_of_parameters": 1,
+            "name": "reloadViewsWithRect(_:)",
+            "number_of_forced_unwrappings": 3,
+            "returns_optional_type": false
+          }
+        ],
+        "name": "CVCalendarMonthView",
+        "number_of_forced_unwrappings": 3,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthView.swift"
+      },
+      {
+        "node_type": "extension",
+        "number_of_methods": 2,
+        "methods": [
+          {
+            "return_type": "()",
+            "parameter_types": [
+              "CGRect"
+            ],
+            "node_type": "method",
+            "number_of_parameters": 1,
+            "name": "updateAppearance(_:)",
+            "returns_optional_type": false
+          },
+          {
+            "return_type": "()",
+            "parameter_types": [],
+            "node_type": "method",
+            "number_of_parameters": 0,
+            "name": "createWeekViews()",
+            "number_of_forced_unwrappings": 1,
+            "returns_optional_type": false,
+            "number_of_lets": 1
+          }
+        ],
+        "name": "CVCalendarMonthView",
+        "number_of_forced_unwrappings": 1,
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthView.swift"
+      },
+      {
+        "number_of_ifs": 2,
+        "node_type": "extension",
+        "number_of_if_lets": 1,
+        "number_of_methods": 3,
+        "methods": [
+          {
+            "return_type": "()",
+            "number_of_ifs": 2,
+            "parameter_types": [],
+            "node_type": "method",
+            "number_of_if_lets": 1,
+            "number_of_parameters": 0,
+            "name": "updateInteractiveView()",
+            "number_of_forced_unwrappings": 6,
+            "returns_optional_type": false,
+            "number_of_lets": 3
+          },
+          {
+            "return_type": "()",
+            "parameter_types": [
+              "UILongPressGestureRecognizer"
+            ],
+            "node_type": "method",
+            "number_of_parameters": 1,
+            "name": "didPressInteractiveView(_:)",
+            "returns_optional_type": false,
+            "number_of_lets": 2
+          },
+          {
+            "return_type": "()",
+            "parameter_types": [
+              "UITapGestureRecognizer"
+            ],
+            "node_type": "method",
+            "number_of_parameters": 1,
+            "name": "didTouchInteractiveView(_:)",
+            "returns_optional_type": false,
+            "number_of_lets": 1
+          }
+        ],
+        "name": "CVCalendarMonthView",
+        "number_of_forced_unwrappings": 6,
+        "number_of_lets": 6,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthView.swift"
+      },
+      {
+        "number_of_ifs": 2,
+        "node_type": "extension",
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "()",
+            "number_of_ifs": 2,
+            "parameter_types": [
+              "Void -\u003e Void",
+              "Bool",
+              "[AnyObject?]"
+            ],
+            "node_type": "method",
+            "number_of_parameters": 3,
+            "name": "safeExecuteBlock(_:collapsingOnNil:withObjects:)",
+            "returns_optional_type": false
+          }
+        ],
+        "name": "CVCalendarMonthView",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthView.swift"
       },
       {
         "node_type": "extension",
@@ -1142,7 +1283,8 @@
         ],
         "name": "CVCalendarMonthContentViewController",
         "number_of_forced_unwrappings": 4,
-        "number_of_lets": 10
+        "number_of_lets": 10,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthContentViewController.swift"
       },
       {
         "number_of_ifs": 11,
@@ -1202,7 +1344,8 @@
         ],
         "name": "CVCalendarMonthContentViewController",
         "number_of_forced_unwrappings": 9,
-        "number_of_lets": 4
+        "number_of_lets": 4,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthContentViewController.swift"
       },
       {
         "number_of_ifs": 6,
@@ -1260,144 +1403,8 @@
           }
         ],
         "name": "CVCalendarMonthContentViewController",
-        "number_of_lets": 2
-      },
-      {
-        "node_type": "extension",
-        "number_of_methods": 1,
-        "methods": [
-          {
-            "return_type": "()",
-            "parameter_types": [],
-            "node_type": "method",
-            "number_of_parameters": 0,
-            "name": "commonInit()",
-            "number_of_forced_unwrappings": 7,
-            "returns_optional_type": false,
-            "number_of_lets": 1
-          }
-        ],
-        "name": "CVCalendarMonthView",
-        "number_of_forced_unwrappings": 7,
-        "number_of_lets": 1
-      },
-      {
-        "number_of_ifs": 1,
-        "node_type": "extension",
-        "number_of_if_lets": 1,
-        "number_of_methods": 1,
-        "methods": [
-          {
-            "return_type": "()",
-            "number_of_ifs": 1,
-            "parameter_types": [
-              "CGRect"
-            ],
-            "node_type": "method",
-            "number_of_if_lets": 1,
-            "number_of_parameters": 1,
-            "name": "reloadViewsWithRect(_:)",
-            "number_of_forced_unwrappings": 3,
-            "returns_optional_type": false
-          }
-        ],
-        "name": "CVCalendarMonthView",
-        "number_of_forced_unwrappings": 3
-      },
-      {
-        "node_type": "extension",
-        "number_of_methods": 2,
-        "methods": [
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "CGRect"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "updateAppearance(_:)",
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [],
-            "node_type": "method",
-            "number_of_parameters": 0,
-            "name": "createWeekViews()",
-            "number_of_forced_unwrappings": 1,
-            "returns_optional_type": false,
-            "number_of_lets": 1
-          }
-        ],
-        "name": "CVCalendarMonthView",
-        "number_of_forced_unwrappings": 1,
-        "number_of_lets": 1
-      },
-      {
-        "number_of_ifs": 2,
-        "node_type": "extension",
-        "number_of_if_lets": 1,
-        "number_of_methods": 3,
-        "methods": [
-          {
-            "return_type": "()",
-            "number_of_ifs": 2,
-            "parameter_types": [],
-            "node_type": "method",
-            "number_of_if_lets": 1,
-            "number_of_parameters": 0,
-            "name": "updateInteractiveView()",
-            "number_of_forced_unwrappings": 6,
-            "returns_optional_type": false,
-            "number_of_lets": 3
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "UILongPressGestureRecognizer"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "didPressInteractiveView(_:)",
-            "returns_optional_type": false,
-            "number_of_lets": 2
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "UITapGestureRecognizer"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "didTouchInteractiveView(_:)",
-            "returns_optional_type": false,
-            "number_of_lets": 1
-          }
-        ],
-        "name": "CVCalendarMonthView",
-        "number_of_forced_unwrappings": 6,
-        "number_of_lets": 6
-      },
-      {
-        "number_of_ifs": 2,
-        "node_type": "extension",
-        "number_of_methods": 1,
-        "methods": [
-          {
-            "return_type": "()",
-            "number_of_ifs": 2,
-            "parameter_types": [
-              "Void -\u003e Void",
-              "Bool",
-              "[AnyObject?]"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 3,
-            "name": "safeExecuteBlock(_:collapsingOnNil:withObjects:)",
-            "returns_optional_type": false
-          }
-        ],
-        "name": "CVCalendarMonthView"
+        "number_of_lets": 2,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthContentViewController.swift"
       },
       {
         "node_type": "extension",
@@ -1414,7 +1421,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVAuxiliaryView"
+        "name": "CVAuxiliaryView",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVAuxiliaryView.swift"
       },
       {
         "node_type": "extension",
@@ -1460,122 +1468,15 @@
         ],
         "name": "CVAuxiliaryView",
         "number_of_forced_unwrappings": 3,
-        "number_of_lets": 13
-      },
-      {
-        "number_of_ifs": 1,
-        "node_type": "extension",
-        "number_of_methods": 4,
-        "methods": [
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "selectionPerformedOnDayView(_:)",
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "number_of_ifs": 1,
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "deselectionPerformedOnDayView(_:)",
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "dequeueDayView(_:)",
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [],
-            "node_type": "method",
-            "number_of_parameters": 0,
-            "name": "flush()",
-            "returns_optional_type": false
-          }
-        ],
-        "name": "CVCalendarDayViewControlCoordinator"
-      },
-      {
-        "node_type": "extension",
-        "number_of_methods": 2,
-        "methods": [
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "presentSelectionOnDayView(_:)",
-            "number_of_forced_unwrappings": 1,
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "presentDeselectionOnDayView(_:)",
-            "number_of_forced_unwrappings": 1,
-            "returns_optional_type": false
-          }
-        ],
-        "name": "CVCalendarDayViewControlCoordinator",
-        "number_of_forced_unwrappings": 2
-      },
-      {
-        "number_of_ifs": 5,
-        "node_type": "extension",
-        "number_of_if_lets": 1,
-        "number_of_methods": 2,
-        "methods": [
-          {
-            "return_type": "()",
-            "number_of_ifs": 5,
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_if_lets": 1,
-            "number_of_parameters": 1,
-            "name": "performDayViewSingleSelection(_:)",
-            "returns_optional_type": false
-          },
-          {
-            "return_type": "()",
-            "parameter_types": [
-              "DayView"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 1,
-            "name": "performDayViewRangeSelection(_:)",
-            "returns_optional_type": false
-          }
-        ],
-        "name": "CVCalendarDayViewControlCoordinator"
+        "number_of_lets": 13,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVAuxiliaryView.swift"
       },
       {
         "number_of_guards": 1,
-        "number_of_ifs": 8,
+        "number_of_ifs": 5,
         "node_type": "extension",
         "number_of_guard_lets": 1,
-        "number_of_if_lets": 4,
+        "number_of_if_lets": 3,
         "number_of_methods": 3,
         "methods": [
           {
@@ -1590,15 +1491,15 @@
           },
           {
             "return_type": "WeekView",
-            "number_of_ifs": 4,
+            "number_of_ifs": 1,
             "parameter_types": [
               "WeekView"
             ],
             "node_type": "method",
-            "number_of_if_lets": 2,
+            "number_of_if_lets": 1,
             "number_of_parameters": 1,
             "name": "getPreviousWeek(_:)",
-            "number_of_forced_unwrappings": 6,
+            "number_of_forced_unwrappings": 2,
             "returns_optional_type": false
           },
           {
@@ -1616,7 +1517,8 @@
           }
         ],
         "name": "CVCalendarWeekContentViewController",
-        "number_of_forced_unwrappings": 12
+        "number_of_forced_unwrappings": 8,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekContentViewController.swift"
       },
       {
         "node_type": "extension",
@@ -1649,7 +1551,8 @@
         ],
         "name": "CVCalendarWeekContentViewController",
         "number_of_forced_unwrappings": 4,
-        "number_of_lets": 11
+        "number_of_lets": 11,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekContentViewController.swift"
       },
       {
         "number_of_ifs": 12,
@@ -1711,6 +1614,7 @@
         "name": "CVCalendarWeekContentViewController",
         "number_of_forced_unwrappings": 10,
         "number_of_lets": 3,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekContentViewController.swift",
         "number_of_vars": 1
       },
       {
@@ -1769,7 +1673,8 @@
           }
         ],
         "name": "CVCalendarWeekContentViewController",
-        "number_of_lets": 2
+        "number_of_lets": 2,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekContentViewController.swift"
       },
       {
         "number_of_ifs": 2,
@@ -1814,7 +1719,8 @@
         ],
         "name": "CVCalendarWeekView",
         "number_of_forced_unwrappings": 7,
-        "number_of_lets": 6
+        "number_of_lets": 6,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekView.swift"
       },
       {
         "number_of_ifs": 1,
@@ -1847,7 +1753,8 @@
         ],
         "name": "CVCalendarWeekView",
         "number_of_forced_unwrappings": 5,
-        "number_of_lets": 3
+        "number_of_lets": 3,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekView.swift"
       },
       {
         "number_of_ifs": 2,
@@ -1868,7 +1775,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarWeekView"
+        "name": "CVCalendarWeekView",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekView.swift"
       },
       {
         "number_of_ifs": 1,
@@ -1908,6 +1816,7 @@
         "name": "CVCalendarViewAnimator",
         "number_of_forced_unwrappings": 2,
         "number_of_lets": 3,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAnimator.swift",
         "number_of_vars": 1,
         "number_of_vars_with_optional_type": 1
       },
@@ -1932,7 +1841,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarViewAnimator"
+        "name": "CVCalendarViewAnimator",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAnimator.swift"
       },
       {
         "number_of_ifs": 2,
@@ -1979,7 +1889,56 @@
           }
         ],
         "name": "CVCalendarViewAnimator",
-        "number_of_forced_unwrappings": 1
+        "number_of_forced_unwrappings": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAnimator.swift"
+      },
+      {
+        "node_type": "extension",
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "NSDate?",
+            "parameter_types": [],
+            "node_type": "method",
+            "number_of_parameters": 0,
+            "name": "convertedDate()",
+            "returns_optional_type": true,
+            "number_of_lets": 2
+          }
+        ],
+        "name": "CVDate",
+        "number_of_lets": 2,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVDate.swift"
+      },
+      {
+        "node_type": "extension",
+        "number_of_methods": 0,
+        "methods": [],
+        "name": "CVDate",
+        "number_of_lets": 2,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVDate.swift",
+        "number_of_vars": 2
+      },
+      {
+        "node_type": "extension",
+        "number_of_methods": 1,
+        "methods": [
+          {
+            "return_type": "String",
+            "parameter_types": [
+              "String",
+              "NSDate"
+            ],
+            "node_type": "method",
+            "number_of_parameters": 2,
+            "name": "dateFormattedStringWithFormat(_:fromDate:)",
+            "returns_optional_type": false,
+            "number_of_lets": 1
+          }
+        ],
+        "name": "CVDate",
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVDate.swift"
       },
       {
         "number_of_ifs": 19,
@@ -2053,6 +2012,7 @@
         "name": "CVCalendarDayView",
         "number_of_forced_unwrappings": 32,
         "number_of_lets": 10,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift",
         "number_of_vars": 6,
         "number_of_vars_with_optional_type": 2
       },
@@ -2083,6 +2043,7 @@
         "name": "CVCalendarDayView",
         "number_of_forced_unwrappings": 3,
         "number_of_lets": 4,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift",
         "number_of_vars": 3,
         "number_of_vars_with_optional_type": 1
       },
@@ -2107,7 +2068,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CGFloat"
+        "name": "CGFloat",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift"
       },
       {
         "number_of_ifs": 1,
@@ -2144,7 +2106,8 @@
           }
         ],
         "name": "CVCalendarDayView",
-        "number_of_lets": 10
+        "number_of_lets": 10,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift"
       },
       {
         "number_of_ifs": 11,
@@ -2186,6 +2149,7 @@
         "name": "CVCalendarDayView",
         "number_of_forced_unwrappings": 29,
         "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift",
         "number_of_vars": 5,
         "number_of_vars_with_optional_type": 2
       },
@@ -2208,7 +2172,8 @@
         ],
         "name": "CVCalendarDayView",
         "number_of_forced_unwrappings": 2,
-        "number_of_lets": 1
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift"
       },
       {
         "number_of_ifs": 2,
@@ -2229,52 +2194,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarDayView"
-      },
-      {
-        "node_type": "extension",
-        "number_of_methods": 1,
-        "methods": [
-          {
-            "return_type": "NSDate?",
-            "parameter_types": [],
-            "node_type": "method",
-            "number_of_parameters": 0,
-            "name": "convertedDate()",
-            "returns_optional_type": true,
-            "number_of_lets": 2
-          }
-        ],
-        "name": "CVDate",
-        "number_of_lets": 2
-      },
-      {
-        "node_type": "extension",
-        "number_of_methods": 0,
-        "methods": [],
-        "name": "CVDate",
-        "number_of_lets": 2,
-        "number_of_vars": 2
-      },
-      {
-        "node_type": "extension",
-        "number_of_methods": 1,
-        "methods": [
-          {
-            "return_type": "String",
-            "parameter_types": [
-              "String",
-              "NSDate"
-            ],
-            "node_type": "method",
-            "number_of_parameters": 2,
-            "name": "dateFormattedStringWithFormat(_:fromDate:)",
-            "returns_optional_type": false,
-            "number_of_lets": 1
-          }
-        ],
-        "name": "CVDate",
-        "number_of_lets": 1
+        "name": "CVCalendarDayView",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift"
       },
       {
         "number_of_ifs": 1,
@@ -2293,7 +2214,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarContentViewController"
+        "name": "CVCalendarContentViewController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "node_type": "extension",
@@ -2310,7 +2232,8 @@
           }
         ],
         "name": "CVCalendarContentViewController",
-        "number_of_forced_unwrappings": 4
+        "number_of_forced_unwrappings": 4,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "number_of_ifs": 2,
@@ -2329,7 +2252,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarContentViewController"
+        "name": "CVCalendarContentViewController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "number_of_ifs": 1,
@@ -2348,13 +2272,15 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarContentViewController"
+        "name": "CVCalendarContentViewController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "node_type": "extension",
         "number_of_methods": 0,
         "methods": [],
-        "name": "CVCalendarContentViewController"
+        "name": "CVCalendarContentViewController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "node_type": "extension",
@@ -2411,7 +2337,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarContentViewController"
+        "name": "CVCalendarContentViewController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "node_type": "extension",
@@ -2430,7 +2357,8 @@
           }
         ],
         "name": "CVCalendarContentViewController",
-        "number_of_lets": 1
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "node_type": "extension",
@@ -2496,7 +2424,8 @@
         ],
         "name": "CVCalendarContentViewController",
         "number_of_forced_unwrappings": 2,
-        "number_of_lets": 6
+        "number_of_lets": 6,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       },
       {
         "number_of_ifs": 6,
@@ -2543,6 +2472,7 @@
           }
         ],
         "name": "CVCalendarContentViewController",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift",
         "number_of_vars": 3
       },
       {
@@ -2558,13 +2488,14 @@
             "returns_optional_type": false
           }
         ],
-        "name": "UIView"
+        "name": "UIView",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift"
       }
     ],
-    "number_of_if_lets": 95,
+    "number_of_if_lets": 93,
     "number_of_guard_lets": 1,
-    "number_of_forced_unwrappings": 271,
-    "number_of_lets": 236,
+    "number_of_forced_unwrappings": 265,
+    "number_of_lets": 235,
     "protocols": [
       {
         "node_type": "protocol",
@@ -2784,7 +2715,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarViewDelegate"
+        "name": "CVCalendarViewDelegate",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewDelegate.swift"
       },
       {
         "node_type": "protocol",
@@ -2831,7 +2763,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarMenuViewDelegate"
+        "name": "CVCalendarMenuViewDelegate",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMenuViewDelegate.swift"
       },
       {
         "node_type": "protocol",
@@ -2854,7 +2787,8 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarViewAnimatorDelegate"
+        "name": "CVCalendarViewAnimatorDelegate",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAnimatorDelegate.swift"
       },
       {
         "node_type": "protocol",
@@ -3117,9 +3051,10 @@
             "returns_optional_type": false
           }
         ],
-        "name": "CVCalendarViewAppearanceDelegate"
+        "name": "CVCalendarViewAppearanceDelegate",
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAppearanceDelegate.swift"
       }
     ],
-    "number_of_vars_with_optional_type": 66
+    "number_of_vars_with_optional_type": 65
   }
 }
