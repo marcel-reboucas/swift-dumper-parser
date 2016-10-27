@@ -2,6 +2,8 @@ package ast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import metrics.MetricContainer;
 import util.Util;
@@ -14,12 +16,18 @@ public abstract class ASTNode {
 	public boolean isImplicit;
 	public String sourceFilePath;
 	public MetricContainer metricContainer;
+	public int startLine;
+	public int endLine;
+	public int numberOfLines;
 	
 	public ASTNode(String contents) {
 		this.nodeInfo = "";
 		this.isImplicit = false;
 		this.children = new ArrayList<ASTNode>();
 		this.metricContainer = new MetricContainer();
+		this.startLine = 0;
+		this.endLine = 0;
+		this.numberOfLines = 0;
 		parseString(contents);
 	}
 
@@ -46,6 +54,33 @@ public abstract class ASTNode {
 
 		if (nodeInfo.contains(" implicit ")) {
 			this.isImplicit = true;
+		}
+		
+		// Gets the location information of node
+		Pattern pattern = Util.getRegexPatternForRange();
+		Matcher matcher = pattern.matcher(nodeInfo);
+				
+		if (matcher.find()){
+			
+			String rangePath = matcher.group(1);
+			
+			pattern = Util.getRegexPatternForRangeLine();
+			matcher = pattern.matcher(rangePath);
+			
+			List<String> matches = new ArrayList<String>();
+	        while(matcher.find()) {
+	            matches.add(matcher.group(1));
+	            
+	            if (matches.size() == 2) {
+	            	break;
+	            }
+	        }
+	 
+			if (matches.size() > 1) {
+				this.startLine = Integer.parseInt(matches.get(0));
+				this.endLine = Integer.parseInt(matches.get(1));
+				this.numberOfLines = endLine - startLine + 1;
+			}
 		}
 		
 		ASTNodeFactory factory = new ASTNodeFactory();

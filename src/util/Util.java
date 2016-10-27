@@ -101,4 +101,12 @@ public class Util {
     public static Pattern getRegexPatternForType() {
     	return Pattern.compile("(?<=type=['’])(.*?)(?=['’])");
     }
+    
+    public static Pattern getRegexPatternForRange() {
+    	return Pattern.compile("(?<=range=\\[)(.*?)(?=[\\]])");
+    }
+    
+    public static Pattern getRegexPatternForRangeLine() {
+    	return Pattern.compile("(?<=[:])(\\d*)(?=[:])");
+    }
 }

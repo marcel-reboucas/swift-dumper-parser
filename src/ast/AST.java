@@ -25,14 +25,6 @@ public class AST extends ASTNode {
     		}
     	}
 	}
-
-	public List<ASTNode> getChildren() {
-		return children;
-	}
-
-	public void setChildren(List<ASTNode> children) {
-		this.children = children;
-	}
 	
 	@Override
 	public void prettyPrint(int ident) {

@@ -57,6 +57,9 @@ public class OutputCreator {
 			classMap.put(name,node.name);
 			classMap.put(type, node.type);
 			classMap.put("inherits", node.inherits);
+			classMap.put("start_line", node.startLine);
+			classMap.put("end_line", node.endLine);
+			classMap.put("number_of_lines", node.numberOfLines);
 			classMap.putAll(clazz.metricContainer.toStringHashMap());
 			classMap.put("methods", getMethods(clazz));
 			classList.add(classMap);
@@ -75,6 +78,9 @@ public class OutputCreator {
 			structMap.put(type, node.type);
 			structMap.put(sourcePath, node.sourceFilePath);
 			structMap.put("inherits", node.inherits);
+			structMap.put("start_line", node.startLine);
+			structMap.put("end_line", node.endLine);
+			structMap.put("number_of_lines", node.numberOfLines);
 			structMap.putAll(struct.metricContainer.toStringHashMap());
 			structMap.put("methods", getMethods(struct));
 			structList.add(structMap);
@@ -92,6 +98,9 @@ public class OutputCreator {
 			extensionMap.put(nodeType, "extension");
 			extensionMap.put(name, node.className);
 			extensionMap.put(sourcePath, node.sourceFilePath);
+			extensionMap.put("start_line", node.startLine);
+			extensionMap.put("end_line", node.endLine);
+			extensionMap.put("number_of_lines", node.numberOfLines);
 			extensionMap.putAll(extension.metricContainer.toStringHashMap());
 			extensionMap.put("methods", getMethods(extension));
 			extensionsList.add(extensionMap);
@@ -108,6 +117,9 @@ public class OutputCreator {
 			protocolMap.put(nodeType, "protocol");
 			protocolMap.put(name,node.name);
 			protocolMap.put(sourcePath, node.sourceFilePath);
+			protocolMap.put("start_line", node.startLine);
+			protocolMap.put("end_line", node.endLine);
+			protocolMap.put("number_of_lines", node.numberOfLines);
 			protocolMap.putAll(protocol.metricContainer.toStringHashMap());
 			protocolMap.put("methods", getMethods(protocol));
 			protocolList.add(protocolMap);
@@ -124,6 +136,9 @@ public class OutputCreator {
 			enumMap.put(nodeType, "extension");
 			enumMap.put(name, node.name);
 			enumMap.put(sourcePath, node.sourceFilePath);
+			enumMap.put("start_line", node.startLine);
+			enumMap.put("end_line", node.endLine);
+			enumMap.put("number_of_lines", node.numberOfLines);
 			enumMap.putAll(node.metricContainer.toStringHashMap());
 			enumMap.put("methods", getMethods(extension));
 			enumsList.add(enumMap);
@@ -152,6 +167,9 @@ public class OutputCreator {
 			method.put("return_type", node.returnType);
 			method.put("returns_optional_type", node.returnsOptionalType);
 			method.put("parameter_types", node.parameterTypes);
+			method.put("start_line", node.startLine);
+			method.put("end_line", node.endLine);
+			method.put("number_of_lines", node.numberOfLines);
 			method.putAll(childFunc.metricContainer.toStringHashMap());
 			methods.add(method);
 		}

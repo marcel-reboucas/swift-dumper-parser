@@ -87,7 +87,7 @@ public class Main {
 		// for each class declaration:
 		for (ASTNode child : node.containsChildrenOfTypeRecursive(ASTNodeType.ClassDecl)) {
 			String identation = Util.getTabsForIdentationAmmount(ident);
-			System.out.println(identation + "Class: "+ ((ClassDeclNode) child).name + " " + child.metricContainer );
+			System.out.println(identation + "Class: "+ ((ClassDeclNode) child).name + " " + child.numberOfLines + " " + child.metricContainer );
 
 			ident += 1;
 			identation = Util.getTabsForIdentationAmmount(ident);
