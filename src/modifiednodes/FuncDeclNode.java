@@ -50,13 +50,13 @@ public class FuncDeclNode extends ASTNode {
 		
 		//look for the name between the bginning and the type
 		Pattern pattern = Util.getRegexPatternBetweenQuotationMarks();
-		Matcher matcher = pattern.matcher(nodeInfo.substring(0,nodeInfo.indexOf("type")));
+		Matcher matcher = pattern.matcher(nodeInfo);
 				
 		if (matcher.find()){
 			this.name = matcher.group(1);
 		} else {
 			 pattern = Util.getRegexPatternBetweenSingleQuotationMarks();
-			 matcher = pattern.matcher(nodeInfo.substring(0,nodeInfo.indexOf("type")));
+			 matcher = pattern.matcher(nodeInfo);
 			 if (matcher.find()){
 				 this.name = matcher.group(1);
 			 }
