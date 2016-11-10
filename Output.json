@@ -275,6 +275,7 @@
         "name": "CVCalendarView",
         "number_of_forced_unwrappings": 3,
         "number_of_lets": 2,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarView.swift",
         "inherits": "UIView",
         "number_of_vars_with_optional_type": 6
       },
@@ -304,7 +305,8 @@
         "number_of_constructors": 1,
         "name": "CVCalendarTouchController",
         "number_of_forced_unwrappings": 1,
-        "number_of_lets": 1
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarTouchController.swift"
       },
       {
         "number_of_lets_with_optional_type": 1,
@@ -349,6 +351,7 @@
         "number_of_constructors": 1,
         "name": "CVCalendarViewAppearance",
         "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAppearance.swift",
         "inherits": "NSObject",
         "number_of_vars_with_optional_type": 33
       },
@@ -548,6 +551,7 @@
         "name": "CVCalendarMonthContentViewController",
         "number_of_forced_unwrappings": 17,
         "number_of_lets": 5,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthContentViewController.swift",
         "inherits": "CVCalendar"
       },
       {
@@ -586,6 +590,7 @@
         "name": "CVCalendarMonthView",
         "number_of_forced_unwrappings": 5,
         "number_of_lets": 2,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMonthContentViewController.swift",
         "inherits": "UIView",
         "number_of_vars_with_optional_type": 3
       },
@@ -671,6 +676,7 @@
         "name": "CVAuxiliaryView",
         "number_of_forced_unwrappings": 3,
         "number_of_lets": 4,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVAuxiliaryView.swift",
         "inherits": "UIView"
       },
       {
@@ -698,6 +704,7 @@
         "number_of_constructors": 1,
         "name": "CVCalendarDayViewControlCoordinator",
         "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayViewControlCoordinator.swift",
         "number_of_vars_with_optional_type": 1
       },
       {
@@ -812,6 +819,7 @@
         "name": "CVCalendarManager",
         "number_of_forced_unwrappings": 11,
         "number_of_lets": 42,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarManager.swift",
         "number_of_vars_with_optional_type": 1
       },
       {
@@ -1008,6 +1016,7 @@
         "name": "CVCalendarWeekContentViewController",
         "number_of_forced_unwrappings": 19,
         "number_of_lets": 6,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekContentViewController.swift",
         "inherits": "CVCalendar"
       },
       {
@@ -1083,6 +1092,7 @@
         "name": "CVCalendarWeekView",
         "number_of_forced_unwrappings": 17,
         "number_of_lets": 6,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarWeekView.swift",
         "inherits": "UIView",
         "number_of_vars_with_optional_type": 3
       },
@@ -1112,7 +1122,8 @@
         "number_of_constructors": 1,
         "name": "CVCalendarViewAnimator",
         "number_of_forced_unwrappings": 1,
-        "number_of_lets": 1
+        "number_of_lets": 1,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarViewAnimator.swift"
       },
       {
         "number_of_ifs": 1,
@@ -1128,6 +1139,7 @@
         "number_of_constructors": 3,
         "name": "CVDate",
         "number_of_lets": 6,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVDate.swift",
         "inherits": "NSObject"
       },
       {
@@ -1249,6 +1261,7 @@
         "name": "CVCalendarMenuView",
         "number_of_forced_unwrappings": 8,
         "number_of_lets": 16,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarMenuView.swift",
         "inherits": "UIView",
         "number_of_vars_with_optional_type": 8
       },
@@ -1288,6 +1301,7 @@
         "number_of_constructors": 3,
         "name": "CVCalendarContentViewController",
         "number_of_lets": 5,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarContentViewController.swift",
         "inherits": "UIViewCont"
       },
       {
@@ -1383,6 +1397,7 @@
         "name": "CVCalendarDayView",
         "number_of_forced_unwrappings": 23,
         "number_of_lets": 11,
+        "source_path": "/Users/Marcel/Documents/Development/CVCalendarz/CVCalendar/CVCalendarDayView.swift",
         "inherits": "UIView",
         "number_of_vars_with_optional_type": 2
       }
@@ -1392,7 +1407,7 @@
     "number_of_guards": 1,
     "enums": [
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 3,
         "number_of_methods": 1,
         "number_of_constructors": 0,
@@ -1417,7 +1432,7 @@
         "end_line": 25
       },
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 2,
         "number_of_methods": 0,
         "number_of_constructors": 0,
@@ -1429,7 +1444,7 @@
         "end_line": 14
       },
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 3,
         "number_of_methods": 0,
         "number_of_constructors": 0,
@@ -1441,7 +1456,7 @@
         "end_line": 15
       },
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 2,
         "number_of_methods": 0,
         "number_of_constructors": 0,
@@ -1453,7 +1468,7 @@
         "end_line": 14
       },
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 5,
         "number_of_methods": 0,
         "number_of_constructors": 0,
@@ -1465,7 +1480,7 @@
         "end_line": 17
       },
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 7,
         "number_of_methods": 0,
         "number_of_constructors": 0,
@@ -1477,7 +1492,7 @@
         "end_line": 19
       },
       {
-        "node_type": "extension",
+        "node_type": "enum",
         "number_of_enum_cases": 3,
         "number_of_methods": 0,
         "number_of_constructors": 0,

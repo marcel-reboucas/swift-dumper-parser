@@ -56,6 +56,7 @@ public class OutputCreator {
 			classMap.put(nodeType, "class");
 			classMap.put(name,node.name);
 			classMap.put(type, node.type);
+			classMap.put(sourcePath, node.sourceFilePath);
 			classMap.put("inherits", node.inherits);
 			classMap.put("start_line", node.startLine);
 			classMap.put("end_line", node.endLine);
@@ -133,7 +134,7 @@ public class OutputCreator {
 			EnumDeclNode node = (EnumDeclNode) extension;
 			
 			HashMap<String, Object> enumMap = new HashMap<>();
-			enumMap.put(nodeType, "extension");
+			enumMap.put(nodeType, "enum");
 			enumMap.put(name, node.name);
 			enumMap.put(sourcePath, node.sourceFilePath);
 			enumMap.put("start_line", node.startLine);
