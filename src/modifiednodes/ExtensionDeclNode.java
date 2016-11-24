@@ -33,10 +33,13 @@ public class ExtensionDeclNode extends ASTNode {
 		//if the nodeInfo contains more information besides the name
 		nodeInfo = nodeInfo.replaceAll(ASTNodeType.PxtensionDecl.identifier, "").trim();
 		
-		if (nodeInfo.trim().indexOf(" ") != -1) {
-			this.className = nodeInfo.trim().substring(0, nodeInfo.trim().indexOf(" ")).trim();
+		// ] is the end of the range information
+		if (nodeInfo.trim().indexOf("]") != -1) {
+			int indexOfSquare = nodeInfo.trim().indexOf("]")+1;
+			String substringStartingAtSquare = nodeInfo.trim().substring(indexOfSquare).trim();
+			this.className = substringStartingAtSquare.substring(0, substringStartingAtSquare.indexOf(" ")).trim();
 		} else {
-			this.className = nodeInfo.trim();
+			this.className = "";
 		}
 		
 		//if inherits

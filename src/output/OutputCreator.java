@@ -149,8 +149,12 @@ public class OutputCreator {
 		rootMap.put("project", projectMap);
 		
 		try (Writer writer = new FileWriter(outputPath)) {
-		    Gson gsonBuilder = new GsonBuilder().setPrettyPrinting().create();
-		    gsonBuilder.toJson(rootMap, writer);
+			GsonBuilder gsonBuilder = new GsonBuilder();
+			gsonBuilder.setPrettyPrinting();
+			gsonBuilder.disableHtmlEscaping();
+			
+		    Gson gson = gsonBuilder.create();
+		    gson.toJson(rootMap, writer);
 		}
 	}
 
