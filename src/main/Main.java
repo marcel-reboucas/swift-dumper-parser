@@ -43,39 +43,40 @@ public class Main {
 			return;
 		}
 
-		for (String projectPath : args) {
-
-			File file = new File(projectPath);
-
-			try {
-
-				FileInputStream input = new FileInputStream(file);
-				String inputString = Util.getStringFromInputStream(input);
-
-				DumperParser parser = new DumperParser(inputString);
-				AST dumperAST = parser.generateAST();
-
-				//dumperAST.prettyPrint(0);
-				dumperAST.fillMetricContainer();
-
-
-				printTest(dumperAST);
-				OutputCreator oc = new OutputCreator(dumperAST);
-				oc.generateJson("Output.json");
-
-				/* analyzing what nodes aren't implemented yet 
-                List<ASTNode> nodes = (List<ASTNode>) dumperAST.getSubnodesOfType(UnknownNode.class);
-
-                for (ASTNode node : nodes){
-                	System.out.println(node.getNodeInfo());
-                }
-				 */
-
-			} catch (IOException e) {
-				System.err.println("Could not read " + file.getAbsolutePath());
+		String projectPath = args[0];
+		String outputName = "Output.json";
+		if (args.length > 1) {
+			outputName = args[1];
+			
+			if (!outputName.endsWith(".json")) {
+				outputName = outputName.concat(".json");
 			}
-
 		}
+		
+		File file = new File(projectPath);
+
+		try {
+
+			FileInputStream input = new FileInputStream(file);
+			String inputString = Util.getStringFromInputStream(input);
+
+			DumperParser parser = new DumperParser(inputString);
+			AST dumperAST = parser.generateAST();
+
+			//dumperAST.prettyPrint(0);
+			dumperAST.fillMetricContainer();
+
+			//printTest(dumperAST);
+			OutputCreator oc = new OutputCreator(dumperAST);
+			System.out.println("Writing output to "+outputName);
+			oc.generateJson(outputName);
+
+
+		} catch (IOException e) {
+			System.err.println("Could not read " + file.getAbsolutePath());
+		}
+
+
 	}
 
 	public static void printTest(ASTNode node){
